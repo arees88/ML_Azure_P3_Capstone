@@ -8,6 +8,7 @@ In this project we are using both, the **Hyperdrive** and **Auto ML** APIs to tr
 The best of these models will be deployed as an endpoint. The model endpoint is then tested to verify if it is working as intented by sending HTTP requests. 
 
 We can choose any model and any data for the project, but the dataset needs to be external and not available in the Azure's ecosystem. 
+The dataset used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California.
 
 The diagram below outlines the steps performed as part of the project:
 
@@ -15,7 +16,7 @@ The diagram below outlines the steps performed as part of the project:
 
 ## Dataset
 
-The data used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
+The dataset used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
 
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
 
