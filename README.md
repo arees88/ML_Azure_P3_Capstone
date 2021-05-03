@@ -1,4 +1,4 @@
-# **Predicting presence of amphibians using features obtained from GIS and satellite images**
+# **Predicting presence of amphibians using GIS and satellite images**
 
 This is the Capstone project for the **Machine Learning Engineer with Microsoft Azure** Nanodegree program from Udacity. 
 
