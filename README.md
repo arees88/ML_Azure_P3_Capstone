@@ -6,11 +6,9 @@ This project uses Microsoft Azure Machine Learning to configure, deploy and cons
 
 In this project we are using both, the Hyperdrive and Auto ML API to train the models. 
 
-Then the best of these models is deployed as an endpoint. 
+The best of these models will be deployed as an endpoint. The model endpoint is then tested to verify if it is working as intented by sending HTTP requests. 
 
-The model endpoint is tested to verify if it is working as intented by sending an HTTP POST request. 
-
-We can choose any model and any data for the project, but ythe datasets needs to be external and not available in the Azure's ecosystem. 
+We can choose any model and any data for the project, but the dataset needs to be external and not available in the Azure's ecosystem. 
 
 The diagram below outlines the steps performed as part of the project:
 
