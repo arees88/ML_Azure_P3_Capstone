@@ -8,7 +8,7 @@ You will be using both the hyperdrive and automl API from azureml to build this 
 
 The diagram below outlines the steps performed as part of the project:
 
-![image](https://user-images.githubusercontent.com/60096624/116926776-b7731380-ac52-11eb-9b10-da932523248d.png)
+![image](https://user-images.githubusercontent.com/60096624/116930600-dde77d80-ac57-11eb-8fb1-bc153b32bab5.png)
 
 ## Dataset
 
