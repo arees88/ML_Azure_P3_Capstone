@@ -4,7 +4,7 @@ This is the Capstone project for the **Machine Learning Engineer with Microsoft 
 
 This project uses Microsoft Azure Machine Learning to configure, deploy and consume a machine learning model. 
 
-In this project we are using both, the Hyperdrive and Auto ML APIs to train the models. 
+In this project we are using both, the **Hyperdrive** and **Auto ML** APIs to train the models. 
 The best of these models will be deployed as an endpoint. The model endpoint is then tested to verify if it is working as intented by sending HTTP requests. 
 
 We can choose any model and any data for the project, but the dataset needs to be external and not available in the Azure's ecosystem. 
