@@ -4,6 +4,16 @@
 
 *TODO:* Write a short introduction to your project.
 
+This project uses Microsoft Azure Machine Learning to configure, deploy and consume a cloud-based machine learning production model. The project will also include the creation, publishing and consuming of a machine learning pipeline.
+
+Both the Azure ML Studio and the Python SDK are used in the project.
+
+Dataset
+The data used for the project is the Bank Marketing dataset. The model built as part of this project will use the data to predict if a person will subscribe to the long-term deposit with the bank or not.
+
+The dataset used for the project contains almost 33 thousand of records with 20 features. The snapshot of the dataset is below:
+
+
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
