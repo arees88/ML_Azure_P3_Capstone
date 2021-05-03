@@ -21,7 +21,7 @@ The data used for the project is the **Amphibians Data Set** available from Mach
 
 The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
 
-Predicting presence of amphibian species using features obtained from GIS and satellite images.
+Predicting presence of amphibian species using features obtained from Geographic Information System (GIS) and satellite images.
 
 The snapshot of the dataset is below:
 
