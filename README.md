@@ -14,10 +14,6 @@ The diagram below outlines the steps performed as part of the project:
 
 The data used for the project is the Amphibians Data Set available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
 
-![image](https://user-images.githubusercontent.com/60096624/116929146-ec349a00-ac55-11eb-8835-1e43d942caa9.png)
-
-![image](https://user-images.githubusercontent.com/60096624/116929433-54837b80-ac56-11eb-9ac6-11cfe56f2386.png)
-
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
 
 The goal is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
@@ -27,6 +23,10 @@ Predicting presence of amphibian species using features obtained from GIS and sa
 The snapshot of the dataset is below:
 
 ![image](https://user-images.githubusercontent.com/60096624/116927469-9d860080-ac53-11eb-8f11-8cafc0dfdb85.png)
+
+The dataset is multilabel and can be used to predict presence of a number of amphibian species. 
+
+In this project we will be using the dataset to predict the presence of Green frogs (Label 1).
 
 The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
