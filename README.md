@@ -6,15 +6,25 @@ This project uses Microsoft Azure Machine Learning to configure, deploy and cons
 
 You will be using both the hyperdrive and automl API from azureml to build this project. You can choose the model you want to train, and the data you want to use. However, the data you use needs to be external and not available in the Azure's ecosystem. For instance, you can use the Heart Failure Prediction dataset from Kaggle to build a classification model.
 
-Project Workflow
 The diagram below outlines the steps performed as part of the project:
 
 ![image](https://user-images.githubusercontent.com/60096624/116926776-b7731380-ac52-11eb-9b10-da932523248d.png)
 
-Dataset
-The data used for the project is the Bank Marketing dataset. The model built as part of this project will use the data to predict if a person will subscribe to the long-term deposit with the bank or not.
+## Dataset
 
-The dataset used for the project contains almost 33 thousand of records with 20 features. The snapshot of the dataset is below:
+The data used for the project is the Amphibians Data Set available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
+
+![image](https://user-images.githubusercontent.com/60096624/116929146-ec349a00-ac55-11eb-8835-1e43d942caa9.png)
+
+The goal is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
+
+Predicting presence of amphibian species using features obtained from GIS and satellite images.
+
+The snapshot of the dataset is below:
+
+![image](https://user-images.githubusercontent.com/60096624/116927469-9d860080-ac53-11eb-8f11-8cafc0dfdb85.png)
+
+The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
 
 ## Project Set Up and Installation
