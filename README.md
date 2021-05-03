@@ -1,4 +1,4 @@
-# Your Project Title Here
+# **Predicting presence of amphibian species using features obtained from Geographic Information System (GIS) and satellite images**
 
 This is the Capstone project for the **Machine Learning Engineer with Microsoft Azure** Nanodegree program from Udacity. 
 
@@ -19,9 +19,7 @@ The data used for the project is the **Amphibians Data Set** available from Mach
 
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
 
-The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
-
-Predicting presence of amphibian species using features obtained from Geographic Information System (GIS) and satellite images.
+The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from Geographic Information System (GIS) and satellite images
 
 The snapshot of the dataset is below:
 
