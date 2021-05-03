@@ -4,7 +4,12 @@
 
 This project uses Microsoft Azure Machine Learning to configure, deploy and consume a cloud-based machine learning production model. The project will also include the creation, publishing and consuming of a machine learning pipeline.
 
-Both the Azure ML Studio and the Python SDK are used in the project.
+You will be using both the hyperdrive and automl API from azureml to build this project. You can choose the model you want to train, and the data you want to use. However, the data you use needs to be external and not available in the Azure's ecosystem. For instance, you can use the Heart Failure Prediction dataset from Kaggle to build a classification model.
+
+Project Workflow
+The diagram below outlines the steps performed as part of the project:
+
+![image](https://user-images.githubusercontent.com/60096624/116926776-b7731380-ac52-11eb-9b10-da932523248d.png)
 
 Dataset
 The data used for the project is the Bank Marketing dataset. The model built as part of this project will use the data to predict if a person will subscribe to the long-term deposit with the bank or not.
