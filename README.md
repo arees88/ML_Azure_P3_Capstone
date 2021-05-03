@@ -15,11 +15,11 @@ The diagram below outlines the steps performed as part of the project:
 
 ## Dataset
 
-The data used for the project is the Amphibians Data Set available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
+The data used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California, Irvine. Here is the dataset summary:
 
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
 
-The goal is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
+The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from GIS systems and satellite images
 
 Predicting presence of amphibian species using features obtained from GIS and satellite images.
 
