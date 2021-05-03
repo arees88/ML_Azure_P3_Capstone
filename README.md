@@ -1,6 +1,6 @@
 # Your Project Title Here
 
-This is the Capstone project for the Machine Learning Engineer with Microsoft Azure Nanodegree program from Udacity. 
+This is the Capstone project for the **Machine Learning Engineer with Microsoft Azure** Nanodegree program from Udacity. 
 
 This project uses Microsoft Azure Machine Learning to configure, deploy and consume a machine learning model. 
 
