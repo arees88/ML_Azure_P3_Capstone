@@ -1,10 +1,16 @@
 # Your Project Title Here
 
-*TODO:* Write a short introduction to your project.
+This is the Capstone project for the Machine Learning Engineer with Microsoft Azure Nanodegree program from Udacity. 
 
-This project uses Microsoft Azure Machine Learning to configure, deploy and consume a cloud-based machine learning production model. The project will also include the creation, publishing and consuming of a machine learning pipeline.
+This project uses Microsoft Azure Machine Learning to configure, deploy and consume a machine learning model. 
 
-You will be using both the hyperdrive and automl API from azureml to build this project. You can choose the model you want to train, and the data you want to use. However, the data you use needs to be external and not available in the Azure's ecosystem. For instance, you can use the Heart Failure Prediction dataset from Kaggle to build a classification model.
+In this project we are using both, the Hyperdrive and Auto ML API to train the models. 
+
+Then the best of these models is deployed as an endpoint. 
+
+The model endpoint is tested to verify if it is working as intented by sending an HTTP POST request. 
+
+We can choose any model and any data for the project, but ythe datasets needs to be external and not available in the Azure's ecosystem. 
 
 The diagram below outlines the steps performed as part of the project:
 
