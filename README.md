@@ -33,6 +33,8 @@ The dataset is multilabel and can be used to predict presence of a number of amp
 
 In this project we will be using the dataset to predict the presence of **Green frogs** (**Label 1**).
 
+Also tried **Great crested newt** (**Label 7**).
+
 The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
 
