@@ -29,11 +29,14 @@ The snapshot of the dataset is below:
 
 ![image](https://user-images.githubusercontent.com/60096624/116927469-9d860080-ac53-11eb-8f11-8cafc0dfdb85.png)
 
-The dataset is multilabel and can be used to predict presence of a number of amphibian species. 
+The dataset is multilabel and can be used to predict presence of a number of amphibian species in water reservoirs.
+
+Here is the description of the features withing the Amphibians Data Set:
+
+![image](https://user-images.githubusercontent.com/60096624/119881071-c8970380-bf24-11eb-843b-3c06039a8f21.png)
 
 In this project we will be using the dataset to predict the presence of **Green frogs** (**Label 1**).
 
-Also tried **Great crested newt** (**Label 7**).
 
 The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
@@ -80,3 +83,6 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+## Future Suggestions
+Also tried **Great crested newt** (**Label 7**).
