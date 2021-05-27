@@ -31,7 +31,7 @@ The snapshot of the dataset is below:
 
 The dataset is multilabel and can be used to predict presence of a number of amphibian species in water reservoirs.
 
-Here is the description of the features withing the Amphibians Data Set:
+Here is the description of the features within the Amphibians Data Set:
 
 ![image](https://user-images.githubusercontent.com/60096624/119881071-c8970380-bf24-11eb-843b-3c06039a8f21.png)
 
