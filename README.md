@@ -77,9 +77,14 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+This section includes the link to the project screencast. The screencast shows the entire process of the working ML application, including a demonstration of:
+
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
+
+Video is available at the following link: https://www.youtube.com/watch?v=t6qs7EGLrmU
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
