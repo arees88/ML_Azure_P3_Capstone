@@ -95,3 +95,12 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 Also tried **Great crested newt** (**Label 7**).
 
 Tried swagger but could not get it to work. The swagger configuration file was not generated automatically.
+
+
+## References
+
+- S. Moro, P. Cortez and P. Rita, February 2014, "A Data-Driven Approach to Predict the Success of Bank Telemarketinghttp" [PDF] (http://repositorium.sdum.uminho.pt/bitstream/1822/30994/1/dss-v3.pdf)
+- Kaggle competition, H. Yamahata, Bank Marketing, UCI Dataset, (https://www.kaggle.com/henriqueyamahata/bank-marketing)
+- Hyperparameter tuning with Azure Machine Learning (https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters#specify-an-early-termination-policy)
+- Scikit-learn Logistic Regression (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+
