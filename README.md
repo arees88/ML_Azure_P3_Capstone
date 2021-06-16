@@ -59,6 +59,11 @@ In addition I have created test input files for testing ONNX runtime with the Am
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
+Setting early termination to True and the timeout to 30 min to limit AutoML duration.
+Setting the maximum iterations concurrency to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
+I selected accuracy as the primary metric. The AutoML will perform 4 cross validations.
+
+
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
