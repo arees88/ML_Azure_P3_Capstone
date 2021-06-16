@@ -49,6 +49,17 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
 
+The dataset has been downloaded from from Machine Learning Repository at University of California, Irvine.
+
+After convering to CSV format the Amphibians Data Set was uploaded to GitHub repository.
+
+Within the notebooks the data is accessed via the URL of the raw file and TabularDataset is used to convert it to Dataset format suitable for 
+
+``
+data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
+dataset = Dataset.Tabular.from_delimited_files(data_loc)
+``
+
 The dataset called Amphibians_dataset_green_frogs.csv is in GitHub and use xxx to create Dataset passed to AutoML.
 
 For hyperdrive I use access the dataset from the train.py + call clean_data for Hyperdrive run.
