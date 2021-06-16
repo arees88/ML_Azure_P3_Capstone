@@ -92,3 +92,5 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 
 ## Future Suggestions
 Also tried **Great crested newt** (**Label 7**).
+
+Tried swagger but could not get it to work. The swagger configuration file was not generated automatically.
