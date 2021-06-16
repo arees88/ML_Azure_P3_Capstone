@@ -17,11 +17,17 @@ The diagram below outlines the steps performed as part of the project:
 
 ## Dataset
 
+### Overview
+*TODO*: Explain about the data you are using and where you got it from.
+
 The dataset used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California, Irvine. 
 
 Here is the dataset summary:
 
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
+
+### Task
+*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
 
 The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from Geographic Information System (GIS) and satellite images
 
@@ -40,20 +46,15 @@ In this project we will be using the dataset to predict the presence of **Green 
 
 The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
-
-## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
-
-## Dataset
-
-### Overview
-*TODO*: Explain about the data you are using and where you got it from.
-
-### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
-
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
+
+The dataset called Amphibians_dataset_green_frogs.csv is in GitHub and use xxx to create Dataset passed to AutoML.
+
+For hyperdrive I use access the dataset from the train.py + call clean_data for Hyperdrive run.
+
+In addition I have created test input files for testing ONNX runtime with the Amphibians test data.
+
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
