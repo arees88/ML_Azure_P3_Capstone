@@ -99,8 +99,7 @@ Tried swagger but could not get it to work. The swagger configuration file was n
 
 ## References
 
-- S. Moro, P. Cortez and P. Rita, February 2014, "A Data-Driven Approach to Predict the Success of Bank Telemarketinghttp" [PDF] (http://repositorium.sdum.uminho.pt/bitstream/1822/30994/1/dss-v3.pdf)
-- Kaggle competition, H. Yamahata, Bank Marketing, UCI Dataset, (https://www.kaggle.com/henriqueyamahata/bank-marketing)
+- Amphibians Data Set, Center for Machine Learning and Intelligent Systems, University of California, Irvine (http://archive.ics.uci.edu/ml/datasets/Amphibians)
 - Hyperparameter tuning with Azure Machine Learning (https://docs.microsoft.com/azure/machine-learning/service/how-to-tune-hyperparameters#specify-an-early-termination-policy)
-- Scikit-learn Logistic Regression (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+- Scikit-learn Random Forest Classifier (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
