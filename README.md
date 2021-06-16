@@ -51,18 +51,14 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 
 The dataset has been downloaded from from Machine Learning Repository at University of California, Irvine.
 
-After convering to CSV format the Amphibians Data Set was uploaded to GitHub repository.
+After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
-Within the notebooks the data is accessed via the URL of the raw file and TabularDataset is used to convert it to Dataset format suitable for 
+Within the notebooks the data is accessed via the URL of the raw file and converted to Dataset format using ``Dataset.Tabular.from_delimited_files()`` method as follows:
 
 ```
 data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
 dataset = Dataset.Tabular.from_delimited_files(data_loc)
 ```
-
-The dataset called Amphibians_dataset_green_frogs.csv is in GitHub and use xxx to create Dataset passed to AutoML.
-
-For hyperdrive I use access the dataset from the train.py + call clean_data for Hyperdrive run.
 
 In addition I have created test input files for testing ONNX runtime with the Amphibians test data.
 
