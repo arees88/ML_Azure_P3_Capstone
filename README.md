@@ -53,15 +53,19 @@ The dataset has been downloaded from from Machine Learning Repository at Univers
 
 After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
-Within the notebooks the data is accessed via the URL of the raw file and converted to Dataset format using ``Dataset.Tabular.from_delimited_files()`` method as follows:
+Within the notebooks the data is accessed via the URL of the raw file and converted to Dataset format as follows:
 
 ```
 data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
 dataset = Dataset.Tabular.from_delimited_files(data_loc)
 ```
 
-In addition I have created test input files for testing ONNX runtime with the Amphibians test data.
+In addition I have created sample data input file for testing ONNX runtime which is accessed in a similar way in the AutoML notebook:
 
+```
+test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
+test_dataset = Dataset.Tabular.from_delimited_files(test_data)
+```
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
