@@ -83,6 +83,7 @@ This section includes the link to the project screencast. The screencast shows t
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
+- Demo of converting model to ONNX format and using ONNX runtime
 
 Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC5kYeM
 
