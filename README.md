@@ -76,10 +76,6 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
-Setting early termination to True and the timeout to 30 min to limit AutoML duration.
-Setting the maximum iterations concurrency to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
-I selected accuracy as the primary metric. The AutoML will perform 4 cross validations.
-
 The following configuration was used for the AutoML run:
 ```
 # automl settings 
@@ -104,23 +100,25 @@ automl_config = AutoMLConfig(
                     **automl_settings  
 )
 ```
-The AutoML experiment ended after 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
+
+The early termination flag was set to True and the timeout to 30 min to limit the AutoML run duration.
+The maximum iterations concurrency was set to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
+I selected accuracy as the primary metric. The AutoML performed 4 cross validations.
+
+### Results
+*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+
+*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
+The AutoML experiment ended at 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
 
 During this time AutoML performed 58 iterations evaluating a set of diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
 ```
 ITERATION   PIPELINE                                       DURATION      METRIC      BEST
        58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
+
 Here is the screenshot of the completed AutoML experiment with the best model summary:
-
-
-
-
-
-### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
