@@ -117,7 +117,7 @@ Best Model
 
 ![alt text](screenshots/4.4_HyperDrive_RunDetails_Popup_Zoom_121945472-bb16b180-cd4b-11eb-8751-660b11882bc9.png)
 
-![alt text](screenshots/4.7_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56)
+![alt text](screenshots/4.7_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
 
 ![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
 
