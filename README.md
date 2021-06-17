@@ -73,11 +73,48 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 ![alt text](screenshots/1.3_Dataset_121936267-58201d00-cd41-11eb-9c53-1beaadae5efc.png)
 
 ## Automated ML
+
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
 Setting early termination to True and the timeout to 30 min to limit AutoML duration.
 Setting the maximum iterations concurrency to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
 I selected accuracy as the primary metric. The AutoML will perform 4 cross validations.
+
+The following configuration was used for the AutoML run:
+```
+# automl settings 
+automl_settings = {
+    "enable_early_stopping": True,
+    "experiment_timeout_minutes": 30,
+    "max_concurrent_iterations": 4,
+    "featurization": 'auto',
+    "primary_metric": 'accuracy',
+    "verbosity": logging.INFO,
+    "n_cross_validations": 4
+}
+
+# Automl config 
+automl_config = AutoMLConfig(  
+                    task = "classification",
+                    compute_target = compute_cluster, 
+                    training_data = dataset,
+                    label_column_name = "Label1",   
+                    debug_log = "automl_errors.log",
+                    enable_onnx_compatible_models = True,
+                    **automl_settings  
+)
+```
+The AutoML experiment ended after 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
+
+During this time AutoML performed 58 iterations evaluating a set of diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
+```
+ITERATION   PIPELINE                                       DURATION      METRIC      BEST
+       58   VotingEnsemble                                 0:01:15       0.7458    0.7458
+```
+Here is the screenshot of the completed AutoML experiment with the best model summary:
+
+
+
 
 
 ### Results
