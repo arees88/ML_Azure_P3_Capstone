@@ -93,11 +93,11 @@ I selected accuracy as the primary metric. The AutoML will perform 4 cross valid
 
 Best Model
 
-![alt text](screenshots/3.1_AutoML_Best model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
+![alt text](screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
-![alt text](screenshots/3.2_AutoML_Best model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
+![alt text](screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
 
-![alt text](screenshots/3.3_AutoML_Best model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
+![alt text](screenshots/3.3_AutoML_Best_model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
 
 
 
@@ -167,11 +167,11 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
-![alt text](screenshots/8.1_Get_ONNX model_121947852-72142c80-cd4e-11eb-8246-b55319cec17d.png)
+![alt text](screenshots/8.1_Get_ONNX_model_121947852-72142c80-cd4e-11eb-8246-b55319cec17d.png)
 
-![alt text](screenshots/8.2_Save_ONNX model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
+![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
 
-![alt text](screenshots/8.3_Save_ONNX model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
+![alt text](screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
 
 ![alt text](screenshots/8.4_ONNX_Test_Data.PNG)
 
