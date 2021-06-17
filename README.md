@@ -66,9 +66,9 @@ In addition I have created sample data input file for testing ONNX runtime which
 test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
-![alt text](screenshots/1.1_Dataset_121936116-2d35c900-cd41-11eb-99e4-3a4b905fb34e.png)
+The Registered Datasets in ML Studio shows __Amphibians Dataset__ has been created as expected:
 
-![alt text](screenshots/1.2_Dataset_121936447-8aca1580-cd41-11eb-8d7a-621d4de840f2.png)
+![alt text](screenshots/1.1_Dataset_121936116-2d35c900-cd41-11eb-99e4-3a4b905fb34e.png)
 
 ![alt text](screenshots/1.3_Dataset_121936267-58201d00-cd41-11eb-9c53-1beaadae5efc.png)
 
