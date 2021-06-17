@@ -150,9 +150,10 @@ Configure the Hyperdrive run using ScriptRunConfig class to set configuration in
 I am using the RandomParameterSampling method for the HyperDrive run to tune the following three hyperparameters of __RandomForestClassifier__:
 
 ```
---n_estimators - Number of trees in the forest
---max_leaf_nodes - Grow trees with max_leaf_nodes
---class_weight - Weights associated with classes
+--n_estimators      - Number of trees in the forest
+--max_leaf_nodes    - Grow trees with max_leaf_nodes
+--class_weight      - Weights associated with classes
+```
 
 The primary metric is 'Accuracy' which is set by executing the train.py script. BanditPolicy is configured as the early termination policy for the run.
 
