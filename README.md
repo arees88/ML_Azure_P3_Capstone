@@ -139,6 +139,59 @@ Best Model
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+### Hyperparameter Sampler
+
+Azure ML supports three types of parameter sampling - Random, Grid and Bayesian sampling.
+I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
+It supports discrete and continous hyperparameters. 
+
+Configure the Hyperdrive run using ScriptRunConfig class to set configuration information for submitting a training run in Azure Machine Learning.
+
+I am using the RandomParameterSampling method for the HyperDrive run to tune the following three hyperparameters of __RandomForestClassifier__:
+
+```
+--n_estimators - Number of trees in the forest
+--max_leaf_nodes - Grow trees with max_leaf_nodes
+--class_weight - Weights associated with classes
+
+The primary metric is 'Accuracy' which is set by executing the train.py script. BanditPolicy is configured as the early termination policy for the run.
+
+In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
+```
+    parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
+    parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
+    parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
+
+```
+
+The ***max_iter*** parameter is of type integer and I have used `choice` to specify four discrete values in the sampler as follows: 
+```
+# Specify parameter sampler
+ps = RandomParameterSampling({
+        "--n_estimators":    choice(30, 40, 60, 80, 100, 120),
+        "--max_leaf_nodes":  choice(50, 60, 100),
+        "--class_weight":    choice('balanced', 'balanced_subsample')
+})
+```
+
+In random sampling, hyperparameter values are chosen randomly, thus saving a lot of computational efforts.
+It can also be used as a starting sampling method as we can use it to do an initial search and then continue with other sampling methods.
+
+#### Eearly Termnination Policy
+
+The purpose of early termination policy is to automatically terminate poorly performing runs so we do not waste time and resources for the experiment. 
+
+There are a number of early termination policies such as BanditPolicy, MedianStoppingPolicy and TruncationSelectionPolicy. 
+For the project I have chosen the **BanditPolicy** based on the slack factor which is the mandatory parameter.
+I have also specified optional parameters, evaluation interval and delay evaluation as follows:
+```
+policy = BanditPolicy (slack_factor = 0.1, evaluation_interval = 1, delay_evaluation = 5)
+```
+The above policy basically states to check the job at every iteration after the initial delay of 5 evaluations. 
+If the primary metric (accuracy) falls outside of the top 10% range, Azure ML will terminate the job. 
+
+The early termination policy ensures that only the best performing runs will execute to completion and hence makes the process more efficient.
+
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
