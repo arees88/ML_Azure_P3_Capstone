@@ -142,7 +142,7 @@ Best Model
 
 ![alt text](screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
-![alt text](screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
+[//]: <> (screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
 
 ![alt text](screenshots/3.3_AutoML_Best_model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
 
