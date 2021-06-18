@@ -236,7 +236,7 @@ The early termination policy ensures that only the best performing runs will exe
 
 ![alt text](screenshots/4.3_HyperDrive_RunDetails_Popup_121945413-a89c7800-cd4b-11eb-94d7-36d573d120c5.png)
 
-![alt text](screenshots/4.4_HyperDrive_RunDetails_Popup_Zoom_121945472-bb16b180-cd4b-11eb-8751-660b11882bc9.png)
+[//]: # (screenshots/4.4_HyperDrive_RunDetails_Popup_Zoom_121945472-bb16b180-cd4b-11eb-8751-660b11882bc9.png)
 
 - The parallel coordinate chart of model performance with various hyperparameters values:
 
@@ -248,7 +248,7 @@ The early termination policy ensures that only the best performing runs will exe
 
 ![alt text](screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
 
-![alt text](screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
+[//]: # (screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
 
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
@@ -260,27 +260,37 @@ The early termination policy ensures that only the best performing runs will exe
 
 ![alt text](screenshots/6.1_Hyper_Deployment_121951473-e224b180-cd52-11eb-8e0a-2be6134d62eb.png)
 
-![alt text](screenshots/6.2_Hyper_Deployment_Zoom_121951711-2e6ff180-cd53-11eb-9237-78c08ae45576.png)
+[//]: # (screenshots/6.2_Hyper_Deployment_Zoom_121951711-2e6ff180-cd53-11eb-9237-78c08ae45576.png)
 
-- Screenshot showing the model endpoint as active:
+- Screenshot showing the model endpointhas been created in ML Studio:
 
 ![alt text](screenshots/6.3_Endpoint_Active_Studio_121946707-1e551380-cd4d-11eb-9cee-d21d4605d788.png)
 
+- Screenshot showing the model endpoint is active:
+
 ![alt text](screenshots/6.4_Endpoint_Active_Studio_121951254-9a058f00-cd52-11eb-9be9-bbda7f63a4c5.png)
+
+- Screenshot showing the model endpoint URIs:
 
 ![alt text](screenshots/6.5_Endpoint_Active_Studio_URI_121951343-b9042100-cd52-11eb-8aac-05972291e9d6.png)
 
+- Screenshot showing the model endpoint is active:
+
 ![alt text](screenshots/7.1_Request_Data_121951844-5a8b7280-cd53-11eb-9360-33a63a70675c.png)
 
-![alt text](screenshots/7.2_Request_Data__Zoom_121951885-68d98e80-cd53-11eb-955c-e0a68eb142dc.png)
+[//]: # (screenshots/7.2_Request_Data__Zoom_121951885-68d98e80-cd53-11eb-955c-e0a68eb142dc.png)
+
+- Screenshot showing the inference request sent to the deployed model and the prediction results:
 
 ![alt text](screenshots/7.3_Hyper_Test_Results_121951968-86a6f380-cd53-11eb-842a-f6c2b272f9a0.png)
 
-![alt text](screenshots/7.4_Hyper_Test_Results_Zoom_121952024-9a525a00-cd53-11eb-8435-b3d72ba6d987.png)
+[//]: # (screenshots/7.4_Hyper_Test_Results_Zoom_121952024-9a525a00-cd53-11eb-8435-b3d72ba6d987.png)
 
 ![alt text](screenshots/7.5_Endpoint_Logs_121952103-b524ce80-cd53-11eb-821c-9d002e7c4026.png)
 
-![alt text](screenshots/7.6_Endpoint_Logs_Zoom_121952156-c8d03500-cd53-11eb-80ab-7d08a6b86adc.png)
+- Screenshot of web service logs after the request was sent to the endpoint:
+
+[//]: # (screenshots/7.6_Endpoint_Logs_Zoom_121952156-c8d03500-cd53-11eb-80ab-7d08a6b86adc.png)
 
 
 <br/>
