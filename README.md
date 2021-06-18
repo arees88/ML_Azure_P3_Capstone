@@ -76,7 +76,7 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
-In the first part of the project we are using AutoML API to train the model.
+In the first part of the project AutoML API is used to train the models.
 
 The following configuration was used for the AutoML run:
 ```
