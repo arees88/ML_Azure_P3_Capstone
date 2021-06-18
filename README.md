@@ -276,18 +276,20 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
-## Save Model in ONNX format
+### Save Model in ONNX format
 As the additional task I have converted the best AutoML model to ONNX format. 
 
 #### Retrieve the Best ONNX Model
 
-The ``get_output`` method returns the best run and the best model. 
-The parameter ``return_onnx_model`` has to be set to true to retrieve the best ONNX model, instead of the Python model:
-
+To retrieve the best ONNX model from the AutoML experiment run, we use the same ``get_output`` method as above. 
+In addition, the parameter ``return_onnx_model`` has to be set to true to retrieve the best ONNX model, instead of the Python model:
 ```
 best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
 ```
+
 #### Save the Best ONNX Model
+
+To save the model in ONNX format we need to use the __OnnxConverter__ class with ``save_onnx_model`` method:
 
 ```
 from azureml.automl.runtime.onnx_convert import OnnxConverter
@@ -297,8 +299,7 @@ OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 
 #### Predict with ONNX Model
 
-The code below shows how onnxruntime package is used to get predictions with ONNX model:
-
+The code below shows how __onnxruntime__ package is used to get predictions with ONNX model:
 ```
 import onnxruntime
 from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
@@ -323,7 +324,6 @@ if python_version_compatible:
 else:
     print('Please use Python version 3.6 or 3.7 to run the inference helper.')
 ```
-
 
 Below is the screenshots of Jupyter notebook where the model from the best AutoML run was retrieved: 
 
