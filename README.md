@@ -138,7 +138,7 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 [comment]: # (screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png)
 
-- Illustration of AutoML run with varying accuracy metric for the different models:
+- Screenshot illustrating of AutoML run with varying accuracy metric for the different models:
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
@@ -260,19 +260,19 @@ It identified the Best model hyperparameters as follows:
 
 [//]: # (screenshots/4.4_HyperDrive_RunDetails_Popup_Zoom_121945472-bb16b180-cd4b-11eb-8751-660b11882bc9.png)
 
-- The parallel coordinate chart of model performance with various hyperparameters values:
+- Parallel coordinate chart of model performance with various hyperparameters values:
 
 ![alt text](screenshots/4.8_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
-
-- Screenshot showing the Best Hyperdrive model in the ML Studio screen:
-
-![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
 
 - Screenshot of the best model with its run id and the different hyperparameters that were tuned:
 
 [//]: # (screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
 
 ![alt text](screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
+
+- Screenshot showing the Best Hyperdrive model in the ML Studio screen:
+
+![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
 
 - Screenshot showing the Best Hyperdrive model in the ML Studio screen:
 
@@ -291,12 +291,14 @@ Comparing the accuracy of the registered best AutoML and Hyperdrive models, we c
 automl_best_model Accuracy : 0.74578900
 hyper_best_model Accuracy:   0.78947368
 ```
+![image](https://user-images.githubusercontent.com/60096624/122616707-d272d900-d082-11eb-9755-6be2c11aeae5.png)
+
 
 ![image](https://user-images.githubusercontent.com/60096624/122614038-c6384d00-d07d-11eb-8ca1-d0e2a83c8aed.png)
 
 To this end I have deployed the best Hyperdrive model as the endpoint.
 
-- Scrinshot showing the Best Hyperdrive model has been deployed successfully:
+- Screenshot showing the Best Hyperdrive model has been deployed successfully:
 
 ![alt text](screenshots/6.1_Hyper_Deployment_121951473-e224b180-cd52-11eb-8e0a-2be6134d62eb.png)
 
