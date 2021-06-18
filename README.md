@@ -228,6 +228,15 @@ The early termination policy ensures that only the best performing runs will exe
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to run.
+
+It identified the Best model hyperparameters as follows:
+```
+'--class_weight':     'balanced'
+'--max_leaf_nodes':   '50'
+'--n_estimators':     '60'
+```
+
 - Screenshot of the RunDetails widget showing progress of the Hyperdrive training runs:
 
 ![alt text](screenshots/4.1_HyperDrive_RunDetails_121944100-2c556500-cd4a-11eb-8ade-3e22c07f0b1c.png)
@@ -242,13 +251,15 @@ The early termination policy ensures that only the best performing runs will exe
 
 ![alt text](screenshots/4.8_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
 
+- Screenshot showing the Best Hyperdrive model in the ML Studio screen:
+
 ![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
 
 - Screenshot of the best model with its run id and the different hyperparameters that were tuned:
 
-![alt text](screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
+[//]: # (screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
 
-[//]: # (screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
+![alt text](screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
 
 - Screenshot showing the Best Hyperdrive model in the ML Studio screen:
 
