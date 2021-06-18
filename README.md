@@ -235,6 +235,10 @@ It identified the Best model hyperparameters as follows:
 '--class_weight':     'balanced'
 '--max_leaf_nodes':   '50'
 '--n_estimators':     '60'
+
+	 Number of trees : 60
+	 Max leaf nodes : 50
+	 Class weights : balanced
 ```
 
 - Screenshot of the RunDetails widget showing progress of the Hyperdrive training runs:
@@ -270,6 +274,20 @@ It identified the Best model hyperparameters as follows:
 
 ## **Model Deployment**
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
+### **Best Models Comparison**
+
+Comparing the accuracy of the registered best AutoML and Hyperdrive models, we can see that the latter performed better:
+```
+automl_best_model Accuracy : 0.74578900
+hyper_best_model Accuracy:   0.78947368
+```
+
+![image](https://user-images.githubusercontent.com/60096624/122614038-c6384d00-d07d-11eb-8ca1-d0e2a83c8aed.png)
+
+To this end I have deployed the best Hyperdrive model as the endpoint.
+
+- Scrinshot showing the Best Hyperdrive model has been deployed successfully:
 
 ![alt text](screenshots/6.1_Hyper_Deployment_121951473-e224b180-cd52-11eb-8e0a-2be6134d62eb.png)
 
