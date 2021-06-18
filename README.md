@@ -290,7 +290,6 @@ best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
 - **Save the Best ONNX Model**
 
 To save the model in ONNX format we need to use the __OnnxConverter__ class with __save_onnx_model__ method to convert the model from pkl format to onnx format:
-
 ```
 from azureml.automl.runtime.onnx_convert import OnnxConverter
 
@@ -300,8 +299,7 @@ OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 
 - **Predict with ONNX Model**
 
-I have saved four data samples in the CSV file __Amphibians_testset.csv__ and used the Tabular to convert it to Azure Dataset for input to ONNX model:
-
+I have saved four data samples in the CSV file __Amphibians_testset.csv__ and used **Tabular** to convert it to Dataset for input to ONNX model:
 ```
 test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
