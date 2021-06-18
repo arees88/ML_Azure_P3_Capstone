@@ -134,6 +134,8 @@ Best Model
 
 ![alt text](screenshots/3.3_AutoML_Best_model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
 
+With the AutoML option we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
+Increasing the experiment time would potentially allow to find another, better performing model.
 
 
 ## Hyperparameter Tuning
