@@ -313,11 +313,11 @@ I have saved four data samples in the CSV file __Amphibians_testset.csv__ and us
 test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
-- The screenshot below shows the test data used for the ONNX model predictions:
+The screenshot below shows the test data used for the ONNX model predictions:
 
 ![alt text](screenshots/8.4_ONNX_Test_Data.PNG)
 
-- The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
+The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
 ```
 import onnxruntime
 from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
@@ -346,6 +346,7 @@ else:
 
 ![alt text](screenshots/8.5_ONNX_model_Predict.PNG)
 
+<br/>
 
 ## Future Suggestions
 
@@ -360,6 +361,8 @@ Also tried **Great crested newt** (**Label 7**).
 Tried swagger but could not get it to work. The swagger configuration file was not generated automatically.
 
 Two version of Hyperdrive - One SKLearn class and the other using ScriptRunConfig Class.
+
+<br/>
 
 ## References
 
