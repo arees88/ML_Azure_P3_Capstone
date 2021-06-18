@@ -129,6 +129,7 @@ During this time AutoML performed 58 iterations evaluating a set of diffrent mod
 ITERATION   PIPELINE                                       DURATION      METRIC      BEST
        58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
+- Screenshot of RunDetails widget showing progress of the training runs of the different experiments
 
 Here is the screenshot of the completed AutoML experiment with the best model summary:
 
@@ -136,9 +137,11 @@ Here is the screenshot of the completed AutoML experiment with the best model su
 
 [comment]: # (screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png)
 
+- The parallel coordinate chart of model performance with various hyperparameters values:
+
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
-Best Model
+- Screenshot of the best model with its run id
 
 ![alt text](screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
@@ -148,6 +151,8 @@ Best Model
 
 With the AutoML option we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
+
+In addition to larger number of runs, a higher number of hyperparameters and a wider choice for search ranges is likely to improve performance. 
 
 
 <br/>
