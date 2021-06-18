@@ -117,7 +117,7 @@ Accuracy was selected as the primary metric. The AutoML is configured to perform
 
 As I am predicting the presence of Green frogs in water reservoirs the label column is set to **Label1**.
 
-I have also set the **enable_onnx_compatible_models** parameter to true as I also would like to convert the best model to ONNX format.
+I have also set the **enable_onnx_compatible_models** parameter to true as I would like to convert the best model to ONNX format.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
@@ -126,13 +126,13 @@ I have also set the **enable_onnx_compatible_models** parameter to true as I als
 
 The AutoML experiment ended at 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
 
-During this time AutoML performed 58 iterations evaluating a set of diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
+During this time AutoML performed 58 iterations evaluating diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
 ```
 ITERATION   PIPELINE                                       DURATION      METRIC      BEST
        58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
 
-Below is the screenshot of the completed AutoML experiment with the best model summary.
+Below is the screenshot of the completed AutoML experiment with the Best model summary.
 
 - Screenshot of RunDetails widget showing progress of the AutoML training runs:
 
@@ -144,7 +144,7 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
-- Screenshot of the Best model with its run id
+- Screenshot of the Best model with its run id:
 
 [//]: # (screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
@@ -154,11 +154,9 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 ![alt text](screenshots/3.3_AutoML_Best_model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
 
-With the AutoML option we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
+With the AutoML configuration we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
-
-In addition to larger number of runs, a higher number of hyperparameters and a wider choice for search ranges is likely to improve performance. 
-
+In addition to larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
 
 <br/>
 
