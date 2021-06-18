@@ -281,8 +281,8 @@ As the additional task I have converted the best AutoML model to ONNX format.
 
 #### Retrieve the Best ONNX Model
 
-To retrieve the best ONNX model from the AutoML experiment run, we use the same ``get_output`` method as above. 
-In addition, the parameter ``return_onnx_model`` has to be set to true to retrieve the best ONNX model, instead of the Python model:
+To retrieve the best ONNX model from the AutoML experiment run, we use the same __get_output__ method as above. 
+In addition, the parameter __return_onnx_model__ has to be set to true to retrieve the best ONNX model, instead of the Python model:
 ```
 best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
 ```
@@ -299,7 +299,14 @@ OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 
 #### Predict with ONNX Model
 
-The code below shows how __onnxruntime__ package is used to get predictions with ONNX model:
+I have saved four data samples in the CSV file __Amphibians_testset.csv__ and used the Tabular to convert it to Azure Dataset for input to ONNX model:
+
+```
+test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
+test_dataset = Dataset.Tabular.from_delimited_files(test_data)
+```
+
+The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
 ```
 import onnxruntime
 from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
