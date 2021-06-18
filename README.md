@@ -235,7 +235,7 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
 
-## Model Deployment
+## **Model Deployment**
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 ![alt text](screenshots/6.1_Hyper_Deployment_121951473-e224b180-cd52-11eb-8e0a-2be6134d62eb.png)
@@ -261,7 +261,7 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/7.6_Endpoint_Logs_Zoom_121952156-c8d03500-cd53-11eb-80ab-7d08a6b86adc.png)
 
 
-## Screen Recording
+## **Screen Recording**
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
 This section includes the link to the project screencast. The screencast shows the entire process of the working ML application, including a demonstration of:
@@ -273,13 +273,13 @@ This section includes the link to the project screencast. The screencast shows t
 
 Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC5kYeM
 
-## Standout Suggestions
+## **Standout Suggestions**
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
-### Save Model in ONNX format
+### **Save Model in ONNX format**
 As the additional task I have converted the best AutoML model to ONNX format. 
 
-#### Retrieve the Best ONNX Model
+- **Retrieve the Best ONNX Model**
 
 To retrieve the best ONNX model from the AutoML experiment run, we use the same __get_output__ method as above. 
 In addition, the parameter __return_onnx_model__ has to be set to true to retrieve the best ONNX model, instead of the Python model:
@@ -287,7 +287,7 @@ In addition, the parameter __return_onnx_model__ has to be set to true to retrie
 best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
 ```
 
-#### Save the Best ONNX Model
+- **Save the Best ONNX Model**
 
 To save the model in ONNX format we need to use the __OnnxConverter__ class with __save_onnx_model__ method to convert the model from pkl format to onnx format:
 
@@ -298,7 +298,7 @@ onnx_path = out_dir + "/automl_best_model.onnx"
 OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 ```
 
-#### Predict with ONNX Model
+- **Predict with ONNX Model**
 
 I have saved four data samples in the CSV file __Amphibians_testset.csv__ and used the Tabular to convert it to Azure Dataset for input to ONNX model:
 
