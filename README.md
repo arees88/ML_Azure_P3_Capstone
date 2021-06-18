@@ -103,15 +103,15 @@ automl_config = AutoMLConfig(
 )
 ```
 
-The early termination flag was set to true and the timeout was set to 30 min to limit the AutoML run duration.
+The early termination flag was set to true and the timeout was set to 30 minutes to limit the AutoML run duration.
 
 The maximum iterations concurrency was set to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
 
-I selected accuracy as the primary metric. The AutoML performed 4 cross validations.
+Accuracy was selected as the primary metric. The AutoML is configured to perform 4 cross validations.
 
-As I am predicting the presence of green frogs in water reservoirs the label column was set t ``Label1``.
+As I am predicting the presence of Green frogs in water reservoirs the label column is set to ``Label1``.
 
-I have also set the ``enable_onnx_compatible_models`` parameter to true as I later would like to convert the best model to ONNX format.
+I have also set the ``enable_onnx_compatible_models`` parameter to true as I also would like to convert the best model to ONNX format.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
@@ -151,11 +151,13 @@ Increasing the experiment time would potentially allow to find another, better p
 
 ### Hyperparameter Sampler
 
+In the second part of the project Hyperdrive API is used to tune the hyperparameters of the model.
+
+I am using the __RandomForestClassifier__ model for the HyperDrive run.
+
 Azure ML supports three types of parameter sampling - Random, Grid and Bayesian sampling.
 I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
 It supports discrete and continous hyperparameters. 
-
-Configure the Hyperdrive run using ScriptRunConfig class to set configuration information for submitting a training run in Azure Machine Learning.
 
 I am using the RandomParameterSampling method for the HyperDrive run to tune the following three hyperparameters of __RandomForestClassifier__:
 
@@ -175,6 +177,10 @@ In the `train.py` script there are three hyperparameters defined that we can be 
 
 ```
 
+Two version of Hyperdrive - One SKLearn class and the other using ScriptRunConfig Class
+
+Configure the Hyperdrive run using ScriptRunConfig class to set configuration information for submitting a training run in Azure Machine Learning.
+
 The ***max_iter*** parameter is of type integer and I have used `choice` to specify four discrete values in the sampler as follows: 
 ```
 # Specify parameter sampler
@@ -187,6 +193,8 @@ ps = RandomParameterSampling({
 
 In random sampling, hyperparameter values are chosen randomly, thus saving a lot of computational efforts.
 It can also be used as a starting sampling method as we can use it to do an initial search and then continue with other sampling methods.
+
+
 
 #### Eearly Termnination Policy
 
@@ -280,6 +288,13 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 
 
 ## Future Suggestions
+
+As mentioned in the previous section, both experiments in the project had restricted number of iterations when searching for best model performance.
+
+In the case of HyperDrive experiment we used Random sampling and restricted the number of iterations to 20. Using higher number of iterations with more Random sampler choices may help with finding a set of hyperparameters that give better performance. To make sure that we don't miss the best performing hyperparameter settings we could swith to Grid sampling instead. Choosing a diffrent early termination policy may also help by providing savings without terminating promising jobs. For example using the more conservative Median Stopping Policy rather than BanditPolicy.
+
+With the AutoML option we restricted the experiment time to 30 minutes which allowed for 28 models to be explored. Increasing the experiment time would potentially allow to find another, better performing model.
+
 Also tried **Great crested newt** (**Label 7**).
 
 Tried swagger but could not get it to work. The swagger configuration file was not generated automatically.
