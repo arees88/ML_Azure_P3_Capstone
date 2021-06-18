@@ -49,7 +49,7 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
 
-The dataset has been downloaded from the Machine Learning Repository at the Center for Machine Learning and Intelligent Systems at University of California, Irvine.
+The dataset has been downloaded from the Machine Learning Repository at Center for Machine Learning and Intelligent Systems at University of California, Irvine.
 
 After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
