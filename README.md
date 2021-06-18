@@ -272,9 +272,7 @@ It identified the Best model hyperparameters as follows:
 
 - Screenshot showing the Best Hyperdrive model in the ML Studio screen:
 
-![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
-
-- Screenshot showing the Best Hyperdrive model in the ML Studio screen:
+[//]: # (screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
 
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
