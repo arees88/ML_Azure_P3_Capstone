@@ -193,7 +193,16 @@ In the `train.py` script there are three hyperparameters defined that we can be 
 
 One SKLearn class and the other using ScriptRunConfig Class
 
-Configure the Hyperdrive run using ScriptRunConfig class to set configuration information for submitting a training run in Azure Machine Learning.
+#### Version 1
+
+![image](https://user-images.githubusercontent.com/60096624/122615868-398f8e00-d081-11eb-9dba-668e02fb3617.png)
+
+#### Version 2
+
+![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
+
+
+Configure the Hyperdrive run using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
 
 The ***max_iter*** parameter is of type integer and I have used `choice` to specify four discrete values in the sampler as follows: 
 ```
