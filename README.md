@@ -276,8 +276,54 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
-### Save model in ONNX format
+## Save Model in ONNX format
 As the additional task I have converted the best AutoML model to ONNX format. 
+
+#### Retrieve the Best ONNX Model
+
+The ``get_output`` method returns the best run and the best model. 
+The parameter ``return_onnx_model`` has to be set to true to retrieve the best ONNX model, instead of the Python model:
+
+```
+best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
+```
+#### Save the Best ONNX Model
+
+```
+from azureml.automl.runtime.onnx_convert import OnnxConverter
+onnx_path = out_dir + "/automl_best_model.onnx"
+OnnxConverter.save_onnx_model(onnx_model, onnx_path)
+```
+
+#### Predict with ONNX Model
+
+The code below shows how onnxruntime package is used to get predictions with ONNX model:
+
+```
+import onnxruntime
+from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
+
+def get_onnx_res(run):
+    res_path = 'onnx_resource.json'
+    run.download_file(name=constants.MODEL_RESOURCE_PATH_ONNX, output_file_path=res_path)
+    with open(res_path) as f:
+        onnx_res = json.load(f)
+    return onnx_res
+
+if python_version_compatible:
+    test_df = test_dataset.to_pandas_dataframe()
+    mdl_bytes = onnx_model.SerializeToString()
+    onnx_res = get_onnx_res(best_run)
+
+    onnxrt_helper = OnnxInferenceHelper(mdl_bytes, onnx_res)
+    pred_onnx, pred_prob_onnx = onnxrt_helper.predict(test_df)
+
+    print(pred_onnx)
+    print(pred_prob_onnx)
+else:
+    print('Please use Python version 3.6 or 3.7 to run the inference helper.')
+```
+
 
 Below is the screenshots of Jupyter notebook where the model from the best AutoML run was retrieved: 
 
