@@ -254,7 +254,11 @@ It identified the Best model hyperparameters as follows:
 
 ![alt text](screenshots/4.1_HyperDrive_RunDetails_121944100-2c556500-cd4a-11eb-8ade-3e22c07f0b1c.png)
 
+- Screenshot showing details of the best performing Hyperdrive runs. Three hyperdrive models achived similar accuracy of 0.78947368:
+
 ![alt text](screenshots/4.6_HyperDrive_RunDetails_121944357-7fc7b300-cd4a-11eb-92d7-66b22f8d56fb.png)
+
+- Screenshot showing the pop-up for one of the best performing models:
 
 ![alt text](screenshots/4.3_HyperDrive_RunDetails_Popup_121945413-a89c7800-cd4b-11eb-94d7-36d573d120c5.png)
 
@@ -292,7 +296,7 @@ Below is the screenshot from the Jupyter notebook listing the registered models 
 
 Comparing the accuracy of the registered best AutoML and Hyperdrive models, we can see that the latter performed better:
 ```
-automl_best_model Accuracy : 0.74578900
+automl_best_model Accuracy:  0.74578900
 hyper_best_model Accuracy:   0.78947368
 ```
 To this end I have deployed the best Hyperdrive model as the endpoint.
