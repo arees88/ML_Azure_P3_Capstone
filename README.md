@@ -72,6 +72,8 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 
 ![alt text](screenshots/1.1_Dataset_121936116-2d35c900-cd41-11eb-99e4-3a4b905fb34e.png)
 
+Contents of the created Dataset:
+
 ![alt text](screenshots/1.3_Dataset_121936267-58201d00-cd41-11eb-9c53-1beaadae5efc.png)
 
 <br/>
