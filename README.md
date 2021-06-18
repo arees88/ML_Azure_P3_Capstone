@@ -286,6 +286,9 @@ In addition, the parameter __return_onnx_model__ has to be set to true to retrie
 ```
 best_run, onnx_model = remote_run.get_output(return_onnx_model=True)
 ```
+Below is the screenshots of Jupyter notebook where the model from the best AutoML run was retrieved: 
+
+![alt text](screenshots/8.1_Get_ONNX_model_121947852-72142c80-cd4e-11eb-8246-b55319cec17d.png)
 
 - **Save the Best ONNX Model**
 
@@ -296,6 +299,12 @@ from azureml.automl.runtime.onnx_convert import OnnxConverter
 onnx_path = out_dir + "/automl_best_model.onnx"
 OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 ```
+Below screenshot show the code that converts the model to the ONNX format and saves to a file:
+
+![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
+
+![alt text](screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
+
 
 - **Predict with ONNX Model**
 
@@ -304,8 +313,11 @@ I have saved four data samples in the CSV file __Amphibians_testset.csv__ and us
 test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
+- The screenshot below shows the test data used for the ONNX model predictions:
 
-The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
+![alt text](screenshots/8.4_ONNX_Test_Data.PNG)
+
+- The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
 ```
 import onnxruntime
 from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
@@ -330,18 +342,7 @@ if python_version_compatible:
 else:
     print('Please use Python version 3.6 or 3.7 to run the inference helper.')
 ```
-
-Below is the screenshots of Jupyter notebook where the model from the best AutoML run was retrieved: 
-
-![alt text](screenshots/8.1_Get_ONNX_model_121947852-72142c80-cd4e-11eb-8246-b55319cec17d.png)
-
-Below screenshot show the code that converts the model to the ONNX format and saves to a file:
-
-![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
-
-![alt text](screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
-
-![alt text](screenshots/8.4_ONNX_Test_Data.PNG)
+- The screenshot below shows the predictions and the probabilities returned by the ONNX model:
 
 ![alt text](screenshots/8.5_ONNX_model_Predict.PNG)
 
