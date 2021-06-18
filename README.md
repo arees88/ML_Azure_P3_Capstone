@@ -144,9 +144,9 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 - Screenshot of the Best model with its run id
 
-![alt text](screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
+[//]: # (screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
-[//]: # (screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
+![alt text](screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
 
 - Screenshot showing the Best AutoML model in the ML Studio screen:
 
