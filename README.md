@@ -132,7 +132,7 @@ ITERATION   PIPELINE                                       DURATION      METRIC 
 
 Below is the screenshot of the completed AutoML experiment with the best model summary.
 
-- Screenshot of RunDetails widget showing progress of the training runs of the different experiments
+- Screenshot of RunDetails widget showing progress of the AutoML training runs
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
@@ -228,6 +228,8 @@ The early termination policy ensures that only the best performing runs will exe
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+- Screenshot of the RunDetails widget showing progress of the Hyperdrive training runs:
+
 ![alt text](screenshots/4.1_HyperDrive_RunDetails_121944100-2c556500-cd4a-11eb-8ade-3e22c07f0b1c.png)
 
 ![alt text](screenshots/4.6_HyperDrive_RunDetails_121944357-7fc7b300-cd4a-11eb-92d7-66b22f8d56fb.png)
@@ -241,6 +243,8 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/4.8_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
 
 ![alt text](screenshots/4.5_HyperDrive_RunDetails_Studio_121944820-ffee1880-cd4a-11eb-87a6-71cbe74e99c5.png)
+
+- Screenshot of the best model with its run id and the different hyperparameters that were tuned:
 
 ![alt text](screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
 
@@ -257,6 +261,8 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/6.1_Hyper_Deployment_121951473-e224b180-cd52-11eb-8e0a-2be6134d62eb.png)
 
 ![alt text](screenshots/6.2_Hyper_Deployment_Zoom_121951711-2e6ff180-cd53-11eb-9237-78c08ae45576.png)
+
+- Screenshot showing the model endpoint as active:
 
 ![alt text](screenshots/6.3_Endpoint_Active_Studio_121946707-1e551380-cd4d-11eb-9cee-d21d4605d788.png)
 
