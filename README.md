@@ -15,7 +15,9 @@ The diagram below outlines the steps performed as part of the project:
 
 ![image](https://user-images.githubusercontent.com/60096624/116930600-dde77d80-ac57-11eb-8fb1-bc153b32bab5.png)
 
-## Dataset
+<br/>
+
+## **Dataset**
 
 ### Overview
 *TODO*: Explain about the data you are using and where you got it from.
@@ -72,7 +74,9 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 
 ![alt text](screenshots/1.3_Dataset_121936267-58201d00-cd41-11eb-9c53-1beaadae5efc.png)
 
-## Automated ML
+<br/>
+
+## **Automated ML**
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
@@ -146,7 +150,9 @@ With the AutoML option we restricted the experiment time to 30 minutes which all
 Increasing the experiment time would potentially allow to find another, better performing model.
 
 
-## Hyperparameter Tuning
+<br/>
+
+## **Hyperparameter Tuning**
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
 ### Hyperparameter Sampler
@@ -235,6 +241,8 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
 
+<br/>
+
 ## **Model Deployment**
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
@@ -261,6 +269,8 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/7.6_Endpoint_Logs_Zoom_121952156-c8d03500-cd53-11eb-80ab-7d08a6b86adc.png)
 
 
+<br/>
+
 ## **Screen Recording**
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
@@ -272,6 +282,8 @@ This section includes the link to the project screencast. The screencast shows t
 - Demo of converting model to ONNX format and using ONNX runtime
 
 Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC5kYeM
+
+<br/>
 
 ## **Standout Suggestions**
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
@@ -342,7 +354,7 @@ if python_version_compatible:
 else:
     print('Please use Python version 3.6 or 3.7 to run the inference helper.')
 ```
-- The screenshot below shows the predictions and the probabilities returned by the ONNX model:
+The screenshot below shows the predictions and the probabilities returned by the ONNX model:
 
 ![alt text](screenshots/8.5_ONNX_model_Predict.PNG)
 
