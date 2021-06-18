@@ -76,6 +76,8 @@ The below screenshots from ML Studio show the __Amphibians Dataset__ has been cr
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
+In the first part of the project we are using AutoML API to train the model.
+
 The following configuration was used for the AutoML run:
 ```
 # automl settings 
@@ -101,13 +103,13 @@ automl_config = AutoMLConfig(
 )
 ```
 
-The early termination flag was set to true and the timeout to 30 min to limit the AutoML run duration.
+The early termination flag was set to true and the timeout was set to 30 min to limit the AutoML run duration.
 
 The maximum iterations concurrency was set to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
 
 I selected accuracy as the primary metric. The AutoML performed 4 cross validations.
 
-As I am predicting the presence of green frogs near the water reservoirs the label column was set t Label1.
+As I am predicting the presence of green frogs in water reservoirs the label column was set t ``Label1``.
 
 I have also set the ``enable_onnx_compatible_models`` parameter to true as I later would like to convert the best model to ONNX format.
 
