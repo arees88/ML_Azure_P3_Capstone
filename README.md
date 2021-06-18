@@ -129,15 +129,16 @@ During this time AutoML performed 58 iterations evaluating a set of diffrent mod
 ITERATION   PIPELINE                                       DURATION      METRIC      BEST
        58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
-- Screenshot of RunDetails widget showing progress of the training runs of the different experiments
 
-Here is the screenshot of the completed AutoML experiment with the best model summary:
+Below is the screenshot of the completed AutoML experiment with the best model summary.
+
+- Screenshot of RunDetails widget showing progress of the training runs of the different experiments
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
 [comment]: # (screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png)
 
-- The parallel coordinate chart of model performance with various hyperparameters values:
+- Illustration of AutoML run with varying accuracy metric for the different models:
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
@@ -234,6 +235,8 @@ The early termination policy ensures that only the best performing runs will exe
 ![alt text](screenshots/4.3_HyperDrive_RunDetails_Popup_121945413-a89c7800-cd4b-11eb-94d7-36d573d120c5.png)
 
 ![alt text](screenshots/4.4_HyperDrive_RunDetails_Popup_Zoom_121945472-bb16b180-cd4b-11eb-8751-660b11882bc9.png)
+
+- The parallel coordinate chart of model performance with various hyperparameters values:
 
 ![alt text](screenshots/4.8_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
 
