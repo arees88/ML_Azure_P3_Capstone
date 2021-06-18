@@ -276,7 +276,14 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
+### Save model in ONNX format
+As the additional task I have converted the best AutoML model to ONNX format. 
+
+Below is the screenshots of Jupyter notebook where the model from the best AutoML run was retrieved: 
+
 ![alt text](screenshots/8.1_Get_ONNX_model_121947852-72142c80-cd4e-11eb-8246-b55319cec17d.png)
+
+Below screenshot show the code that converts the model to the ONNX format and saves to a file:
 
 ![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
 
