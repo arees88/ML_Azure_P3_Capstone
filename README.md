@@ -134,7 +134,7 @@ Here is the screenshot of the completed AutoML experiment with the best model su
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
-<! ![alt text](screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png) >
+[//]: ![alt text](screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png)
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
