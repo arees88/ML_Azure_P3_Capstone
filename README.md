@@ -55,7 +55,7 @@ The dataset has been downloaded from the Machine Learning Repository at Center f
 
 After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
-Within the notebooks the data is accessed via the URL to the raw file and converted to Dataset format using ``Tabular`` attribute as follows:
+Within the notebooks the data is accessed via the URL to the raw file and converted to Dataset format using **Tabular** attribute as follows:
 
 ```
 data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
@@ -109,13 +109,13 @@ automl_config = AutoMLConfig(
 
 The early termination flag was set to true and the timeout was set to 30 minutes to limit the AutoML run duration.
 
-The maximum iterations concurrency was set to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
+The maximum iterations concurrency was set to **4**, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
 
-Accuracy was selected as the primary metric. The AutoML is configured to perform 4 cross validations.
+Accuracy was selected as the primary metric. The AutoML is configured to perform **4** cross validations.
 
-As I am predicting the presence of Green frogs in water reservoirs the label column is set to ``Label1``.
+As I am predicting the presence of Green frogs in water reservoirs the label column is set to **Label1**.
 
-I have also set the ``enable_onnx_compatible_models`` parameter to true as I also would like to convert the best model to ONNX format.
+I have also set the **enable_onnx_compatible_models** parameter to true as I also would like to convert the best model to ONNX format.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
@@ -132,7 +132,7 @@ ITERATION   PIPELINE                                       DURATION      METRIC 
 
 Below is the screenshot of the completed AutoML experiment with the best model summary.
 
-- Screenshot of RunDetails widget showing progress of the AutoML training runs
+- Screenshot of RunDetails widget showing progress of the AutoML training runs:
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
@@ -142,11 +142,13 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
-- Screenshot of the best model with its run id
+- Screenshot of the Best model with its run id
 
 ![alt text](screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
 [//]: # (screenshots/3.2_AutoML_Best_model__Zoom_121941211-e3e87800-cd46-11eb-9226-8f52eaa4ffe3.png)
+
+- Screenshot showing the Best AutoML model in the ML Studio screen:
 
 ![alt text](screenshots/3.3_AutoML_Best_model_Studio_121940739-53aa3300-cd46-11eb-9e71-cfd4049d328d.png)
 
@@ -160,8 +162,6 @@ In addition to larger number of runs, a higher number of hyperparameters and a w
 
 ## **Hyperparameter Tuning**
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-
-### Hyperparameter Sampler
 
 In the second part of the project Hyperdrive API is used to tune the hyperparameters of the model.
 
@@ -179,7 +179,7 @@ I am using the RandomParameterSampling method for the HyperDrive run to tune the
 --class_weight      - Weights associated with classes
 ```
 
-The primary metric is 'Accuracy' which is set by executing the train.py script. BanditPolicy is configured as the early termination policy for the run.
+The primary metric is **Accuracy** which is set in the **train.py** script. BanditPolicy is configured as the early termination policy for the run.
 
 In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
 ```
@@ -189,7 +189,9 @@ In the `train.py` script there are three hyperparameters defined that we can be 
 
 ```
 
-Two version of Hyperdrive - One SKLearn class and the other using ScriptRunConfig Class
+### Two version of Hyperdrive configuration
+
+One SKLearn class and the other using ScriptRunConfig Class
 
 Configure the Hyperdrive run using ScriptRunConfig class to set configuration information for submitting a training run in Azure Machine Learning.
 
@@ -205,8 +207,6 @@ ps = RandomParameterSampling({
 
 In random sampling, hyperparameter values are chosen randomly, thus saving a lot of computational efforts.
 It can also be used as a starting sampling method as we can use it to do an initial search and then continue with other sampling methods.
-
-
 
 #### Eearly Termnination Policy
 
@@ -250,6 +250,8 @@ The early termination policy ensures that only the best performing runs will exe
 
 [//]: # (screenshots/5.2_HyperDrive_Best_model_Zoom121946376-c5857b00-cd4c-11eb-91e8-f6ac2b820ed9.png)
 
+- Screenshot showing the Best Hyperdrive model in the ML Studio screen:
+
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
 
@@ -262,7 +264,7 @@ The early termination policy ensures that only the best performing runs will exe
 
 [//]: # (screenshots/6.2_Hyper_Deployment_Zoom_121951711-2e6ff180-cd53-11eb-9237-78c08ae45576.png)
 
-- Screenshot showing the model endpointhas been created in ML Studio:
+- Screenshot showing the model endpoint has been created in the ML Studio:
 
 ![alt text](screenshots/6.3_Endpoint_Active_Studio_121946707-1e551380-cd4d-11eb-9cee-d21d4605d788.png)
 
@@ -274,21 +276,21 @@ The early termination policy ensures that only the best performing runs will exe
 
 ![alt text](screenshots/6.5_Endpoint_Active_Studio_URI_121951343-b9042100-cd52-11eb-8aac-05972291e9d6.png)
 
-- Screenshot showing the model endpoint is active:
+- Screenshot showing the sample data used to test the deployed model:
 
 ![alt text](screenshots/7.1_Request_Data_121951844-5a8b7280-cd53-11eb-9360-33a63a70675c.png)
 
 [//]: # (screenshots/7.2_Request_Data__Zoom_121951885-68d98e80-cd53-11eb-955c-e0a68eb142dc.png)
 
-- Screenshot showing the inference request sent to the deployed model and the prediction results:
+- Screenshot showing the inference request sent to the deployed model and the prediction results returned:
 
 ![alt text](screenshots/7.3_Hyper_Test_Results_121951968-86a6f380-cd53-11eb-842a-f6c2b272f9a0.png)
 
 [//]: # (screenshots/7.4_Hyper_Test_Results_Zoom_121952024-9a525a00-cd53-11eb-8435-b3d72ba6d987.png)
 
-![alt text](screenshots/7.5_Endpoint_Logs_121952103-b524ce80-cd53-11eb-821c-9d002e7c4026.png)
-
 - Screenshot of web service logs after the request was sent to the endpoint:
+
+![alt text](screenshots/7.5_Endpoint_Logs_121952103-b524ce80-cd53-11eb-821c-9d002e7c4026.png)
 
 [//]: # (screenshots/7.6_Endpoint_Logs_Zoom_121952156-c8d03500-cd53-11eb-80ab-7d08a6b86adc.png)
 
