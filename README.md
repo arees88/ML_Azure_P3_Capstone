@@ -138,7 +138,7 @@ Below is the screenshot of the completed AutoML experiment with the best model s
 
 [comment]: # (screenshots/2.2_AutoML_RunDetails_Zoom_121939452-f2ce2b00-cd44-11eb-8719-e8dfcc406cd3.png)
 
-- Screenshot illustrating of AutoML run with varying accuracy metric for the different models:
+- Illustration of AutoML run with varying accuracy metric for the different models:
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
