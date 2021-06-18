@@ -49,11 +49,11 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
 
-The dataset has been downloaded from the Machine Learning Repository, Center for Machine Learning and Intelligent Systems at University of California, Irvine.
+The dataset has been downloaded from the Machine Learning Repository at the Center for Machine Learning and Intelligent Systems at University of California, Irvine.
 
 After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
-Within the notebooks the data is accessed via the URL of the raw file and converted to Dataset format using `Tabular` attribute as follows:
+Within the notebooks the data is accessed via the URL to the raw file and converted to Dataset format using ``Tabular`` attribute as follows:
 
 ```
 data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
