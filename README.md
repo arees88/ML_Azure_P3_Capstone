@@ -120,8 +120,8 @@ The AutoML experiment completed in 29 minutes as it reached the stopping criteri
 
 During this time AutoML performed 58 iterations evaluating diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
 ```
-ITERATION   PIPELINE                                       DURATION      METRIC      BEST
-       58   VotingEnsemble                                 0:01:15       0.7458    0.7458
+	ITERATION   PIPELINE                                       DURATION      METRIC      BEST
+	       58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
 Here is the screenshot of the best model trained with its parameters:
 
