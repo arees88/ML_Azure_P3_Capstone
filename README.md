@@ -254,6 +254,12 @@ It identified the Best model hyperparameters as follows:
 	 Class weights : balanced
 ```
 
+```
+	Class weights:		'--class_weight':     'balanced'
+	Max leaf nodes		'--max_leaf_nodes':   '50'
+	Number of trees:	'--n_estimators':     '60'
+```
+
 - Screenshot of the **RunDetails** widget showing progress of the Hyperdrive training runs:
 
 ![alt text](screenshots/4.1_HyperDrive_RunDetails_121944100-2c556500-cd4a-11eb-8ade-3e22c07f0b1c.png)
@@ -448,7 +454,7 @@ In the case of **Hyperdrive** experiment we used Random sampling and restricted 
 The **Amphibians Data Set** is multilabel and can be used to predict the presence of seven different amphibian species in water reservoirs. 
 I have used Label1 to predict the presence of the Green frogs. We could use the remaining labels, Label2 to Label7, to predict the presence of the other amphibian species such as Brown frogs, Common toad, Fire-bellied toad, Tree frog, Common newt and Great crested newt.
 
-Swagger is the tool that helps to build, document, and consume RESTful web services deployed in the Azure ML Studio. 
+**Swagger** is the tool that helps to build, document, and consume RESTful web services deployed in the Azure ML Studio. 
 It explains what types of HTTP requests the API can consume, e.g. POST and GET, the request parameters it takes and the return values. 
 To configure Swagger we need to obtain the Swagger definition file.
 Normally Azure provides the swagger.json file, which is used to create the web site that documents the HTTP endpoint, for the models deployed in ML Studio.
