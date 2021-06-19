@@ -20,7 +20,6 @@ The diagram below outlines the steps performed as part of the project:
 ## **Dataset**
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
 
 The dataset used for the project is the **Amphibians Data Set** available from Machine Learning Repository at University of California, Irvine. 
 
@@ -29,7 +28,6 @@ Here is the dataset summary:
 ![image](https://user-images.githubusercontent.com/60096624/116929286-1be3a200-ac56-11eb-804a-ccc3009b5836.png)
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
 
 The goal of the project is to predict the presence of amphibians species near the water reservoirs based on features obtained from Geographic Information System (GIS) and satellite images
 
@@ -49,7 +47,6 @@ In this project we will be using the dataset to predict the presence of **Green 
 The dataset was downloaded using the following link:  http://archive.ics.uci.edu/ml/datasets/Amphibians
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
 
 The dataset has been downloaded from the Machine Learning Repository at the Center for Machine Learning and Intelligent Systems, University of California, Irvine.
 
@@ -79,8 +76,6 @@ Contents of the created Dataset:
 <br/>
 
 ## **Automated ML**
-
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
 In the first part of the project **AutoML API** is used to train the models.
 
@@ -120,9 +115,6 @@ As I am predicting the presence of Green frogs in water reservoirs the label col
 I have also set the **enable_onnx_compatible_models** parameter to true as later I would like to convert the best model to ONNX format.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 The AutoML experiment completed in 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
 
@@ -163,7 +155,6 @@ Increasing the experiment time would potentially allow to find another, better p
 <br/>
 
 ## **Hyperparameter Tuning**
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
 In the second part of the project **Hyperdrive API** is used to tune the model hyperparameters. I am using the __RandomForestClassifier__ model.
 
@@ -237,9 +228,6 @@ The primary metric is **Accuracy** which is set in the **train.py** script. Band
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with its parameters.
 
 The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to run.
 
@@ -287,7 +275,6 @@ In addition to the larger number of runs, an increased number of hyperparameters
 <br/>
 
 ## **Model Deployment**
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 ### **Best Models Comparison**
 
@@ -344,7 +331,6 @@ To this end I have deployed the best Hyperdrive model as the endpoint.
 <br/>
 
 ## **Screen Recording**
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
 This section includes the link to the project screencast. The screencast shows the entire process of the working ML application, including a demonstration of:
 
@@ -358,7 +344,6 @@ Video is available at the following link: https://www.youtube.com/watch?v=Ueu9BC
 <br/>
 
 ## **Standout Suggestions**
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
 
 ### **Save Model in ONNX format**
 As the additional task I have converted the best AutoML model to ONNX format. 
@@ -431,10 +416,9 @@ The screenshot below shows the predictions and the probabilities returned by the
 ![alt text](screenshots/8.5_ONNX_model_Predict.PNG)
 
 <br/>
-
 ## Future Suggestions
 
-As mentioned in the previous section, both experiments in the project had restricted number of iterations when searching for best model performance.
+As mentioned in the previous sections, both experiments in the project had restricted number of iterations when searching for best model performance.
 
 In the **AutoML** experiment we restricted the run time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
@@ -453,7 +437,6 @@ When we deploy Azure models from the Jupyter notebooks using the **AciWebservice
 It would be good to find out how the Swagger configuration can be generated for the Endpoints deployed via the Jupyter notebooks as well.
 
 <br/>
-
 ## References
 
 - Amphibians Data Set, Machine Learning Repository, Center for Machine Learning and Intelligent Systems, University of California, Irvine (http://archive.ics.uci.edu/ml/datasets/Amphibians)
