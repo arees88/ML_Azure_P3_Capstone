@@ -416,6 +416,7 @@ The screenshot below shows the predictions and the probabilities returned by the
 ![alt text](screenshots/8.5_ONNX_model_Predict.PNG)
 
 <br/>
+
 ## Future Suggestions
 
 As mentioned in the previous sections, both experiments in the project had restricted number of iterations when searching for best model performance.
@@ -437,6 +438,7 @@ When we deploy Azure models from the Jupyter notebooks using the **AciWebservice
 It would be good to find out how the Swagger configuration can be generated for the Endpoints deployed via the Jupyter notebooks as well.
 
 <br/>
+
 ## References
 
 - Amphibians Data Set, Machine Learning Repository, Center for Machine Learning and Intelligent Systems, University of California, Irvine (http://archive.ics.uci.edu/ml/datasets/Amphibians)
