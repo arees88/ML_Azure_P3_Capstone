@@ -131,6 +131,7 @@ During this time AutoML performed 58 iterations evaluating diffrent models. The 
 ITERATION   PIPELINE                                       DURATION      METRIC      BEST
        58   VotingEnsemble                                 0:01:15       0.7458    0.7458
 ```
+![image](https://user-images.githubusercontent.com/60096624/122629479-37dfbd80-d0b5-11eb-979c-10004b28a2c7.png)
 
 Below is the screenshot of the completed AutoML experiment with the Best model summary.
 
