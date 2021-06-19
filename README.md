@@ -387,7 +387,7 @@ OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 ```
 Below screenshot show the code that converts the model to the ONNX format and saves to a file:
 
-![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
+[//]: # (screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
 
 ![alt text](screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
 
