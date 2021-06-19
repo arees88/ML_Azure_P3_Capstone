@@ -284,9 +284,9 @@ It identified the Best model hyperparameters as follows:
 
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
-Increasing the experiment time would potentially allow to find another, better performing model.
+Increasing the **_max_total_runs_** parameter for the experiment would potentially allow to find another, better performing model hyperparameter combination.
 
-In addition to larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
+In addition to the larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
 
 <br/>
 
