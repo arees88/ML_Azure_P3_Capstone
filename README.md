@@ -160,8 +160,6 @@ Below is the screenshot of the completed AutoML experiment with the details of t
 With the AutoML configuration we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
 
-In addition to larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
-
 <br/>
 
 ## **Hyperparameter Tuning**
@@ -284,6 +282,9 @@ It identified the Best model hyperparameters as follows:
 
 ![alt text](screenshots/5.3_HyperDrive_Best_model_Studio_121946514-eb128480-cd4c-11eb-9819-c18b9b42c1c8.png)
 
+Increasing the experiment time would potentially allow to find another, better performing model.
+
+In addition to larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
 
 <br/>
 
