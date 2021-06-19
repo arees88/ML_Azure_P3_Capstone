@@ -159,6 +159,7 @@ Below is the screenshot of the completed AutoML experiment with the details of t
 
 With the AutoML configuration we restricted the experiment time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
+
 In addition to larger number of runs, an increased number of hyperparameters and a wider choice for search ranges is likely to improve performance as well. 
 
 <br/>
