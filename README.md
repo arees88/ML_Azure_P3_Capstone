@@ -210,27 +210,30 @@ I have also specified optional parameters, evaluation interval and delay evaluat
 ```
 policy = BanditPolicy (slack_factor = 0.1, evaluation_interval = 1, delay_evaluation = 5)
 ```
-The above policy basically states to check the job at every iteration after the initial delay of 5 evaluations. 
+The above policy is defined to check the job at every iteration after the initial delay of 5 evaluations. 
 If the primary metric (accuracy) falls outside of the top 10% range, Azure ML will terminate the job. 
 
 The early termination policy ensures that only the best performing runs will execute to completion and hence makes the process more efficient.
 
-### Two version of Hyperdrive configuration
+### Hyperdrive configuration
 
-One SKLearn class and the other using ScriptRunConfig Class
+I have used two versions of the Hyperdrive configuration, one is using the **SKLearn** class, and the other is using **ScriptRunConfig** class.
 
 #### Version 1
 
+This is the Hyperdrive configuration where the **SKLearn** estimator is created for use with **train.py** script:
+
 ![image](https://user-images.githubusercontent.com/60096624/122615868-398f8e00-d081-11eb-9dba-668e02fb3617.png)
+
+As seen above, the 'SKLearn' estimator is deprecated and we are advised to use the 'ScriptRunConfig' from 'azureml.core.script_run_config' instead.
 
 #### Version 2
 
-Configure the Hyperdrive run using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
+This is the Hyperdrive configuration using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
 
 ![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
 
 The primary metric is **Accuracy** which is set in the **train.py** script. BanditPolicy is configured as the early termination policy for the run.
-
 
 
 ### Results
