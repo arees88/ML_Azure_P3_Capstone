@@ -111,11 +111,11 @@ automl_config = AutoMLConfig(
 
 The early termination flag was set to true and the timeout was set to 30 minutes to limit the AutoML run duration.
 
-The maximum iterations concurrency was set to **4**, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
+The maximum iterations concurrency was set to 4, as the maximum nodes configured in the compute cluster must be greater than the number of concurrent operations in the experiment, and the compute cluster has 5 nodes configured. 
 
-Accuracy was selected as the primary metric. The AutoML is configured to perform **4** cross validations.
+Accuracy was selected as the primary metric. The AutoML is configured to perform 4 cross validations.
 
-As I am predicting the presence of Green frogs in water reservoirs the label column is set to **Label1**.
+As I am predicting the presence of Green frogs in water reservoirs the label column is set to ``Label1``.
 
 I have also set the **enable_onnx_compatible_models** parameter to true as I would like to convert the best model to ONNX format.
 
