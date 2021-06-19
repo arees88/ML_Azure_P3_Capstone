@@ -137,7 +137,7 @@ Here is the screenshot of the best model trained with its parameters:
 
 Below is the screenshot of the completed AutoML experiment with the details of the Best model.
 
-- Screenshot of RunDetails widget showing progress of the AutoML training runs:
+- Screenshot of **RunDetails** widget showing progress of the AutoML training runs:
 
 ![alt text](screenshots/2.1_AutoML_RunDetails_121939279-c4505000-cd44-11eb-85ac-c2eff1c61ee9.png)
 
@@ -147,7 +147,7 @@ Below is the screenshot of the completed AutoML experiment with the details of t
 
 ![alt text](screenshots/2.3_AutoML_RunDetails_Accuracy_121939065-7a676a00-cd44-11eb-8aa5-da39bb4ee2b4.png)
 
-- Screenshot of the Best model with its run id:
+- Screenshot of the **Best model** with its run id:
 
 [//]: # (screenshots/3.1_AutoML_Best_model_121941266-f498ee00-cd46-11eb-801e-87e60f898752.png)
 
@@ -253,7 +253,7 @@ It identified the Best model hyperparameters as follows:
 	 Class weights : balanced
 ```
 
-- Screenshot of the RunDetails widget showing progress of the Hyperdrive training runs:
+- Screenshot of the **RunDetails** widget showing progress of the Hyperdrive training runs:
 
 ![alt text](screenshots/4.1_HyperDrive_RunDetails_121944100-2c556500-cd4a-11eb-8ade-3e22c07f0b1c.png)
 
@@ -271,7 +271,7 @@ It identified the Best model hyperparameters as follows:
 
 ![alt text](screenshots/4.8_Hyperdrive_Tune_Graph_121248344-3e8f5900-c89b-11eb-89da-41725cea6f56.png)
 
-- Screenshot of the best model with its run id and the different hyperparameters that were tuned:
+- Screenshot of the **Best model** with its run id and the different hyperparameters that were tuned:
 
 [//]: # (screenshots/5.1_HyperDrive_Best_model_121945025-37f55b80-cd4b-11eb-9cfd-ec607d8d07be.png)
 
@@ -314,7 +314,7 @@ To this end I have deployed the best Hyperdrive model as the endpoint.
 
 ![alt text](screenshots/6.3_Endpoint_Active_Studio_121946707-1e551380-cd4d-11eb-9cee-d21d4605d788.png)
 
-- Screenshot showing the model endpoint is active:
+- Screenshot showing the model **endpoint** is active:
 
 ![alt text](screenshots/6.4_Endpoint_Active_Studio_121951254-9a058f00-cd52-11eb-9be9-bbda7f63a4c5.png)
 
