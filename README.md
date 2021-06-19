@@ -117,7 +117,7 @@ Accuracy was selected as the primary metric. The AutoML is configured to perform
 
 As I am predicting the presence of Green frogs in water reservoirs the label column is set to ``Label1``.
 
-I have also set the **enable_onnx_compatible_models** parameter to true as I would like to convert the best model to ONNX format.
+I have also set the **enable_onnx_compatible_models** parameter to true as later I would like to convert the best model to ONNX format.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
