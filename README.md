@@ -53,19 +53,19 @@ The dataset was downloaded using the following link:  http://archive.ics.uci.edu
 
 The dataset has been downloaded from the Machine Learning Repository at the Center for Machine Learning and Intelligent Systems, University of California, Irvine.
 
-After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
+After converting to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
 Within the Jupyter notebooks the data is accessed via the raw file URL and converted to Dataset format using **Tabular** attribute as follows:
 
 ```
-data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
+data_loc = https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv
 dataset = Dataset.Tabular.from_delimited_files(data_loc)
 ```
 
 In addition I have created sample data input file for testing ONNX runtime which is accessed in a similar way in the AutoML notebook:
 
 ```
-test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
+test_data = https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
 Below are the screenshots from the ML Studio showing the __Amphibians Dataset__ has been created as expected:
@@ -122,7 +122,7 @@ I have also set the **enable_onnx_compatible_models** parameter to true as later
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 The AutoML experiment completed in 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
 
@@ -185,7 +185,7 @@ I am using the **RandomParameterSampling** method to tune the following three hy
 	--class_weight      - Weights associated with classes
 ```
 I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
-It supports discrete and continous hyperparameters. 
+It supports discrete and continuous hyperparameters. 
 
 The **_n_estimators_** and **_max_leaf_nodes_** hyperparameters are of type integer and I have used choice to specify several discrete integer values for them.
 The **_class_weight_** is of type string and I have specified two descrete choice values for this hyperparameter in the sampler as follows:
@@ -200,7 +200,7 @@ The **_class_weight_** is of type string and I have specified two descrete choic
 In random sampling, hyperparameter values are chosen randomly, thus saving a lot of computational efforts.
 It can also be used as a starting sampling method as we can use it to do an initial search and then continue with other sampling methods.
 
-#### Eearly Termnination Policy
+#### Early Termination Policy
 
 The purpose of early termination policy is to automatically terminate poorly performing runs so we do not waste time and resources for the experiment. 
 There are a number of early termination policies such as BanditPolicy, MedianStoppingPolicy and TruncationSelectionPolicy. 
@@ -239,7 +239,7 @@ The primary metric is **Accuracy** which is set in the **train.py** script. Band
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with its parameters.
 
 The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to run.
 
@@ -398,7 +398,7 @@ Below screenshot show the code that converts the model to the ONNX format and sa
 
 I have saved four data samples in the CSV file __Amphibians_testset.csv__ and used **Tabular** to convert it to Dataset for input to ONNX model:
 ```
-test_data = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv"
+test_data = https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_testset.csv
 test_dataset = Dataset.Tabular.from_delimited_files(test_data)
 ```
 The screenshot below shows the test data used for the ONNX model predictions:
@@ -443,15 +443,15 @@ As mentioned in the previous section, both experiments in the project had restri
 In the **AutoML** experiment we restricted the run time to 30 minutes which allowed for 58 models to be explored. 
 Increasing the experiment time would potentially allow to find another, better performing model.
 
-In the case of **Hyperdrive** experiment we used Random sampling and restricted the number of iterations to 20. Using higher number of iterations with more Random sampler choices may help with finding a set of hyperparameters that give better performance. To make sure that we do not miss the best performing hyperparameter settings we could swith to Grid sampling instead. Choosing a diffrent early termination policy may also help by providing savings without terminating promising jobs. For example using the more conservative Median Stopping Policy rather than BanditPolicy.
+In the case of **Hyperdrive** experiment we used Random sampling and restricted the number of iterations to 20. Using higher number of iterations with more Random sampler choices may help with finding a set of hyperparameters that give better performance. To make sure that we do not miss the best performing hyperparameter settings we could swith to Grid sampling instead. Choosing a different early termination policy may also help by providing savings without terminating promising jobs. For example using the more conservative Median Stopping Policy rather than BanditPolicy.
 
 The **Amphibians Data Set** is multilabel and can be used to predict the presence of seven different amphibian species in water reservoirs. 
-I have used Label1 to predict the presence of the Green frogs. We could use the ramaining labels, Label2 to Label7, to predict the presence of the other amphibian species such as Brown frogs, Common toad, Fire-bellied toad, Tree frog, Common newt and Great crested newt.
+I have used Label1 to predict the presence of the Green frogs. We could use the remaining labels, Label2 to Label7, to predict the presence of the other amphibian species such as Brown frogs, Common toad, Fire-bellied toad, Tree frog, Common newt and Great crested newt.
 
 Swagger is the tool that helps to build, document, and consume RESTful web services deployed in the Azure ML Studio. 
 It explains what types of HTTP requests the API can consume, e.g. POST and GET, the request parameters it takes and the return values. 
 To configure Swagger we need to obtain the Swagger definition file.
-Nomally Azure provides the swagger.json file, which is used to create the web site that documents the HTTP endpoint, for the models deployed in ML Studio.
+Normally Azure provides the swagger.json file, which is used to create the web site that documents the HTTP endpoint, for the models deployed in ML Studio.
 This can be downloaded from the Swagger URI section of the Endpoint screen of the deployed model.
 When we deploy Azure models from the Jupyter notebooks using the **AciWebservice** Class, the swagger configuration file is not automatically generated.
 It would be good to find out how the Swagger configuration can be generated for the Endpoints deployed via the Jupyter notebooks as well.
