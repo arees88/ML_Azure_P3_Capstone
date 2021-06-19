@@ -278,7 +278,7 @@ In addition to the larger number of runs, an increased number of hyperparameters
 
 ### **Best Models Comparison**
 
-Below is the screenshot from the Jupyter notebook listing the registered models after AutoML and Hyperdrive runs completed:
+Below is the screenshot from the Jupyter notebook listing the registered models after AutoML and Hyperdrive runs have completed:
 
 ![image](https://user-images.githubusercontent.com/60096624/122616707-d272d900-d082-11eb-9755-6be2c11aeae5.png)
 
