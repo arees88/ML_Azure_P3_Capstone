@@ -178,7 +178,7 @@ In the `train.py` script there are three hyperparameters defined that we can pas
 
 Azure ML supports three types of parameter sampling - Random, Grid and Bayesian sampling.
 
-I am using the **RandomParameterSampling** method for the HyperDrive run to tune the following three hyperparameters of the __RandomForestClassifier__ model:
+I am using the **RandomParameterSampling** method to tune the following three hyperparameters of the __RandomForestClassifier__ model:
 ```
 	--n_estimators      - Number of trees in the forest
 	--max_leaf_nodes    - Grow trees with max_leaf_nodes
