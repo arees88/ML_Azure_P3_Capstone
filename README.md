@@ -440,9 +440,10 @@ The screenshot below shows the predictions and the probabilities returned by the
 
 As mentioned in the previous section, both experiments in the project had restricted number of iterations when searching for best model performance.
 
-In the case of HyperDrive experiment we used Random sampling and restricted the number of iterations to 20. Using higher number of iterations with more Random sampler choices may help with finding a set of hyperparameters that give better performance. To make sure that we don't miss the best performing hyperparameter settings we could swith to Grid sampling instead. Choosing a diffrent early termination policy may also help by providing savings without terminating promising jobs. For example using the more conservative Median Stopping Policy rather than BanditPolicy.
+In the **AutoML** experiment we restricted the run time to 30 minutes which allowed for 58 models to be explored. 
+Increasing the experiment time would potentially allow to find another, better performing model.
 
-With the AutoML option we restricted the experiment time to 30 minutes which allowed for 28 models to be explored. Increasing the experiment time would potentially allow to find another, better performing model.
+In the case of **Hyperdrive** experiment we used Random sampling and restricted the number of iterations to 20. Using higher number of iterations with more Random sampler choices may help with finding a set of hyperparameters that give better performance. To make sure that we do not miss the best performing hyperparameter settings we could swith to Grid sampling instead. Choosing a diffrent early termination policy may also help by providing savings without terminating promising jobs. For example using the more conservative Median Stopping Policy rather than BanditPolicy.
 
 The **Amphibians Data Set** is multilabel and can be used to predict the presence of seven different amphibian species in water reservoirs. 
 I have used Label1 to predict the presence of the Green frogs. We could use the ramaining labels, Label2 to Label7, to predict the presence of the other amphibian species such as Brown frogs, Common toad, Fire-bellied toad, Tree frog, Common newt and Great crested newt.
