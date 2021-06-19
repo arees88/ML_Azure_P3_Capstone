@@ -190,22 +190,6 @@ In the `train.py` script there are three hyperparameters defined that we can be 
     parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
 
 ```
-
-### Two version of Hyperdrive configuration
-
-One SKLearn class and the other using ScriptRunConfig Class
-
-#### Version 1
-
-![image](https://user-images.githubusercontent.com/60096624/122615868-398f8e00-d081-11eb-9dba-668e02fb3617.png)
-
-#### Version 2
-
-![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
-
-
-Configure the Hyperdrive run using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
-
 The ***max_iter*** parameter is of type integer and I have used `choice` to specify four discrete values in the sampler as follows: 
 ```
 # Specify parameter sampler
@@ -233,6 +217,23 @@ The above policy basically states to check the job at every iteration after the 
 If the primary metric (accuracy) falls outside of the top 10% range, Azure ML will terminate the job. 
 
 The early termination policy ensures that only the best performing runs will execute to completion and hence makes the process more efficient.
+
+### Two version of Hyperdrive configuration
+
+One SKLearn class and the other using ScriptRunConfig Class
+
+#### Version 1
+
+![image](https://user-images.githubusercontent.com/60096624/122615868-398f8e00-d081-11eb-9dba-668e02fb3617.png)
+
+#### Version 2
+
+![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
+
+
+Configure the Hyperdrive run using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
+
+
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
