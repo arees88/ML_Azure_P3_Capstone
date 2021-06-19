@@ -387,9 +387,9 @@ OnnxConverter.save_onnx_model(onnx_model, onnx_path)
 ```
 Below screenshot show the code that converts the model to the ONNX format and saves to a file:
 
-[//]: # (screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
+![alt text](screenshots/8.2_Save_ONNX_model_121948014-a25bcb00-cd4e-11eb-8d2b-5ca9a5044f83.png)
 
-![alt text](screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
+[//]: # (screenshots/8.3_Save_ONNX_model_Zoom_121948142-c7503e00-cd4e-11eb-9929-586fbcd62d96.png)
 
 
 - **Predict with ONNX Model**
@@ -405,28 +405,28 @@ The screenshot below shows the test data used for the ONNX model predictions:
 
 The code below shows how to get the necessary ONNX resources and then use the __onnxruntime__ package and __OnnxInferenceHelper__ class to get predictions with ONNX model:
 ```
-import onnxruntime
-from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
+	import onnxruntime
+	from azureml.automl.runtime.onnx_convert import OnnxInferenceHelper
 
-def get_onnx_res(run):
-    res_path = 'onnx_resource.json'
-    run.download_file(name=constants.MODEL_RESOURCE_PATH_ONNX, output_file_path=res_path)
-    with open(res_path) as f:
-        onnx_res = json.load(f)
-    return onnx_res
+	def get_onnx_res(run):
+	    res_path = 'onnx_resource.json'
+	    run.download_file(name=constants.MODEL_RESOURCE_PATH_ONNX, output_file_path=res_path)
+	    with open(res_path) as f:
+		onnx_res = json.load(f)
+	    return onnx_res
 
-if python_version_compatible:
-    test_df = test_dataset.to_pandas_dataframe()
-    mdl_bytes = onnx_model.SerializeToString()
-    onnx_res = get_onnx_res(best_run)
+	if python_version_compatible:
+	    test_df = test_dataset.to_pandas_dataframe()
+	    mdl_bytes = onnx_model.SerializeToString()
+	    onnx_res = get_onnx_res(best_run)
 
-    onnxrt_helper = OnnxInferenceHelper(mdl_bytes, onnx_res)
-    pred_onnx, pred_prob_onnx = onnxrt_helper.predict(test_df)
+	    onnxrt_helper = OnnxInferenceHelper(mdl_bytes, onnx_res)
+	    pred_onnx, pred_prob_onnx = onnxrt_helper.predict(test_df)
 
-    print(pred_onnx)
-    print(pred_prob_onnx)
-else:
-    print('Please use Python version 3.6 or 3.7 to run the inference helper.')
+	    print(pred_onnx)
+	    print(pred_prob_onnx)
+	else:
+	    print('Please use Python version 3.6 or 3.7 to run the inference helper.')
 ```
 The screenshot below shows the predictions and the probabilities returned by the ONNX model:
 
