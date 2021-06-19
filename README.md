@@ -229,7 +229,7 @@ The primary metric is **Accuracy** which is set in the **train.py** script. Band
 
 ### Results
 
-The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to run.
+The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to complete.
 
 It identified the Best model hyperparameters as follows:
 ```
