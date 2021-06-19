@@ -165,41 +165,26 @@ Increasing the experiment time would potentially allow to find another, better p
 ## **Hyperparameter Tuning**
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
-In the second part of the project Hyperdrive API is used to tune the hyperparameters of the model.
-
-I am using the __RandomForestClassifier__ model for the HyperDrive run.
+In the second part of the project Hyperdrive API is used to tune the hyperparameters of the model. I am using the __RandomForestClassifier__ model for the HyperDrive run.
 
 Azure ML supports three types of parameter sampling - Random, Grid and Bayesian sampling.
 I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
 It supports discrete and continous hyperparameters. 
 
-I am using the RandomParameterSampling method for the HyperDrive run to tune the following three hyperparameters of __RandomForestClassifier__:
-
+I am using the **RandomParameterSampling** method for the HyperDrive run to tune the following three hyperparameters of __RandomForestClassifier__:
 ```
---n_estimators      - Number of trees in the forest
---max_leaf_nodes    - Grow trees with max_leaf_nodes
---class_weight      - Weights associated with classes
+	--n_estimators      - Number of trees in the forest
+	--max_leaf_nodes    - Grow trees with max_leaf_nodes
+	--class_weight      - Weights associated with classes
 ```
-
-The primary metric is **Accuracy** which is set in the **train.py** script. BanditPolicy is configured as the early termination policy for the run.
-
-In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
 ```
-    parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
-    parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
-    parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
-
+	# Specify parameter sampler
+	ps = RandomParameterSampling({
+		"--n_estimators":    choice(30, 40, 60, 80, 100, 120),
+		"--max_leaf_nodes":  choice(50, 60, 100),
+		"--class_weight":    choice('balanced', 'balanced_subsample')
+	})
 ```
-The ***max_iter*** parameter is of type integer and I have used `choice` to specify four discrete values in the sampler as follows: 
-```
-# Specify parameter sampler
-ps = RandomParameterSampling({
-        "--n_estimators":    choice(30, 40, 60, 80, 100, 120),
-        "--max_leaf_nodes":  choice(50, 60, 100),
-        "--class_weight":    choice('balanced', 'balanced_subsample')
-})
-```
-
 In random sampling, hyperparameter values are chosen randomly, thus saving a lot of computational efforts.
 It can also be used as a starting sampling method as we can use it to do an initial search and then continue with other sampling methods.
 
@@ -228,12 +213,18 @@ One SKLearn class and the other using ScriptRunConfig Class
 
 #### Version 2
 
-![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
-
-
 Configure the Hyperdrive run using **ScriptRunConfig** class to set configuration information for submitting a training run in Azure Machine Learning.
 
+![image](https://user-images.githubusercontent.com/60096624/122616119-b3277c00-d081-11eb-93b5-1f0d3bf582f6.png)
 
+The primary metric is **Accuracy** which is set in the **train.py** script. BanditPolicy is configured as the early termination policy for the run.
+
+In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
+```
+	parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
+	parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
+	parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
+```
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
