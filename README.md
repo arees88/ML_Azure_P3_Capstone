@@ -165,7 +165,7 @@ Increasing the experiment time would potentially allow to find another, better p
 ## **Hyperparameter Tuning**
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
-In the second part of the project **Hyperdrive API** is used to tune the hyperparameters of the model. I am using the __RandomForestClassifier__.
+In the second part of the project **Hyperdrive API** is used to tune the hyperparameters of the model. I am using the __RandomForestClassifier__ model.
 
 In the `train.py` script there are three hyperparameters defined that we can pass to create the **RandomForestClassifier** model:
 ```
