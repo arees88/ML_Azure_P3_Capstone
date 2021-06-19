@@ -187,8 +187,8 @@ I am using the **RandomParameterSampling** method to tune the following three hy
 I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
 It supports discrete and continous hyperparameters. 
 
-The **_n_estimators_** and **_max_leaf_nodes_** model parameters are of type integer and I have used choice to specify several discrete integer values for them.
-The **_class_weight_** is of type string and I have specified two descrete values for it in the sampler as follows:
+The **_n_estimators_** and **_max_leaf_nodes_** hyperparameters are of type integer and I have used choice to specify several discrete integer values for them.
+The **_class_weight_** is of type string and I have specified two descrete choice values for this hyperparameter in the sampler as follows:
 ```
 	# Specify parameter sampler
 	ps = RandomParameterSampling({
