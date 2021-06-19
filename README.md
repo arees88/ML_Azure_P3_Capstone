@@ -167,7 +167,7 @@ Increasing the experiment time would potentially allow to find another, better p
 
 In the second part of the project **Hyperdrive API** is used to tune the model hyperparameters. I am using the __RandomForestClassifier__ model.
 
-In the `train.py` script there are three hyperparameters defined that we can pass to create the **RandomForestClassifier** model:
+I have defined three hyperparameters in the training script **train.py** which can be passed to create the **RandomForestClassifier** model:
 ```
 	parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
 	parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
@@ -203,8 +203,8 @@ It can also be used as a starting sampling method as we can use it to do an init
 #### Eearly Termnination Policy
 
 The purpose of early termination policy is to automatically terminate poorly performing runs so we do not waste time and resources for the experiment. 
-
 There are a number of early termination policies such as BanditPolicy, MedianStoppingPolicy and TruncationSelectionPolicy. 
+
 For the project I have chosen the **BanditPolicy** based on the slack factor which is the mandatory parameter.
 I have also specified optional parameters, evaluation interval and delay evaluation as follows:
 ```
@@ -217,7 +217,7 @@ The early termination policy ensures that only the best performing runs will exe
 
 ### Hyperdrive configuration
 
-I have used two versions of the Hyperdrive configuration, one is using the **SKLearn** class, and the other is using **ScriptRunConfig** class.
+I have used two versions of the Hyperdrive configuration, one is using the **SKLearn** class, and the other is using the **ScriptRunConfig** class.
 
 #### Version 1
 
@@ -444,11 +444,16 @@ In the case of HyperDrive experiment we used Random sampling and restricted the 
 
 With the AutoML option we restricted the experiment time to 30 minutes which allowed for 28 models to be explored. Increasing the experiment time would potentially allow to find another, better performing model.
 
-Also tried **Great crested newt** (**Label 7**).
+The **Amphibians Data Set** is multilabel and can be used to predict the presence of seven different amphibian species in water reservoirs. 
+I have used Label1 to predict the presence of the Green frogs. We could use the ramaining labels, Label2 to Label7, to predict the presence of the other amphibian species such as Brown frogs, Common toad, Fire-bellied toad, Tree frog, Common newt and Great crested newt.
 
-Tried swagger but could not get it to work. The swagger configuration file was not generated automatically.
-
-Two version of Hyperdrive - One SKLearn class and the other using ScriptRunConfig Class.
+Swagger is the tool that helps to build, document, and consume RESTful web services deployed in the Azure ML Studio. 
+It explains what types of HTTP requests the API can consume, e.g. POST and GET, the request parameters it takes and the return values. 
+To configure Swagger we need to obtain the Swagger definition file.
+Nomally Azure provides the swagger.json file, which is used to create the web site that documents the HTTP endpoint, for the models deployed in ML Studio.
+This can be downloaded from the Swagger URI section of the Endpoint screen of the deployed model.
+When we deploy Azure models from the Jupyter notebooks using the **AciWebservice** Class, the swagger configuration file is not automatically generated.
+It would be good to find out how the Swagger configuration can be generated for the Endpoints deployed via the Jupyter notebooks as well.
 
 <br/>
 
