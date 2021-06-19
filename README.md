@@ -124,7 +124,7 @@ I have also set the **enable_onnx_compatible_models** parameter to true as later
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
-The AutoML experiment ended at 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
+The AutoML experiment completed in 29 minutes as it reached the stopping criteria (`experiment_timeout_minutes=30`).
 
 During this time AutoML performed 58 iterations evaluating diffrent models. The best performing model was `VotingEnsemble` with accuracy `0.7458`:
 ```
