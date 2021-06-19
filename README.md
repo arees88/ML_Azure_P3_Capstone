@@ -55,7 +55,7 @@ The dataset has been downloaded from the Machine Learning Repository at the Cent
 
 After convering to CSV format the Amphibians Data Set was uploaded to the GitHub repository.
 
-Within the Jupyter notebooks the data is accessed via the URL to the raw file and converted to Dataset format using **Tabular** attribute as follows:
+Within the Jupyter notebooks the data is accessed via the raw file URL and converted to Dataset format using **Tabular** attribute as follows:
 
 ```
 data_loc = "https://raw.githubusercontent.com/arees88/ML_Azure_P3_Capstone/main/Amphibians_dataset_green_frogs.csv"
