@@ -245,19 +245,9 @@ The Hyperdrive run configured with ScriptRunConfig class took 42 minutes to run.
 
 It identified the Best model hyperparameters as follows:
 ```
-'--class_weight':     'balanced'
-'--max_leaf_nodes':   '50'
-'--n_estimators':     '60'
-
-	 Number of trees : 60
-	 Max leaf nodes : 50
-	 Class weights : balanced
-```
-
-```
-	Class weights:		'--class_weight':     'balanced'
-	Max leaf nodes		'--max_leaf_nodes':   '50'
-	Number of trees:	'--n_estimators':     '60'
+Class weights:		'--class_weight':     'balanced'
+Max leaf nodes		'--max_leaf_nodes':   '50'
+Number of trees:	'--n_estimators':     '60'
 ```
 
 - Screenshot of the **RunDetails** widget showing progress of the Hyperdrive training runs:
