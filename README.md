@@ -82,7 +82,7 @@ Contents of the created Dataset:
 
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
-In the first part of the project AutoML API is used to train the models.
+In the first part of the project **AutoML API** is used to train the models.
 
 The following configuration was used for the AutoML run:
 ```
@@ -165,7 +165,16 @@ Increasing the experiment time would potentially allow to find another, better p
 ## **Hyperparameter Tuning**
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
-In the second part of the project Hyperdrive API is used to tune the hyperparameters of the model. I am using the __RandomForestClassifier__ model for the HyperDrive run.
+In the second part of the project **Hyperdrive API** is used to tune the hyperparameters of the model. I am using the __RandomForestClassifier__ model for the HyperDrive run.
+
+In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
+```
+	parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
+	parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
+	parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
+```
+
+#### Parameter Sampling
 
 Azure ML supports three types of parameter sampling - Random, Grid and Bayesian sampling.
 I have chosen Random Parameter Sampling because it is faster and supports early termination of low-performance runs.
@@ -177,6 +186,8 @@ I am using the **RandomParameterSampling** method for the HyperDrive run to tune
 	--max_leaf_nodes    - Grow trees with max_leaf_nodes
 	--class_weight      - Weights associated with classes
 ```
+The **_n_estimators_** and **_max_leaf_nodes_** model parameters are of type integer and I have used choice to specify several discrete values for them.
+The **_class_weight_** is of type string and I have specified two descrete values for it in the sampler as follows:
 ```
 	# Specify parameter sampler
 	ps = RandomParameterSampling({
@@ -219,12 +230,7 @@ Configure the Hyperdrive run using **ScriptRunConfig** class to set configuratio
 
 The primary metric is **Accuracy** which is set in the **train.py** script. BanditPolicy is configured as the early termination policy for the run.
 
-In the `train.py` script there are three hyperparameters defined that we can be pass to create the RandomForestClassifier model:
-```
-	parser.add_argument('--n_estimators',   type=int, default=20,   help="Number of trees in the forest")
-	parser.add_argument('--max_leaf_nodes', type=int, default=60,   help="Grow trees with max_leaf_nodes")
-	parser.add_argument('--class_weight',   type=str, default=None, help="Weights associated with classes")
-```
+
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
